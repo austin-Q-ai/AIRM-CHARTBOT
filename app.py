@@ -1,13 +1,15 @@
 # Import required classes from the library
+import os
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler
+from dotenv import load_dotenv
 
 from src.main.stactic_commands import *
 from src.main.handle_callback import *
 
-# Use your own bot token here
-TOKEN = '6562985712:AAESlYvw6QqOQKteAyf17lJo4uD7hG8XHk8'
-API_URL = f"https://api.telegram.org/bot{TOKEN}/setMyCommands"
+load_dotenv(dotenv_path='.env')
 
+# Use your own bot token here
+TOKEN = os.getenv('TG_TOKEN')
 
 # Main function update
 def main() -> None:
