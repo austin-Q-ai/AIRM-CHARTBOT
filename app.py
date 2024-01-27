@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 from src.main.stactic_commands import *
 from src.main.handle_callback import *
+from src.main.user_settings import *
 
 load_dotenv(dotenv_path='.env')
 
@@ -54,6 +55,10 @@ def main() -> None:
     # Add the /stats command handler to the application
     stats_handler = CommandHandler('stats', stats)
     application.add_handler(stats_handler)
+
+    # Add the /stats command handler to the application
+    settings_handler = CommandHandler('settings', settings_dashboard)
+    application.add_handler(settings_handler)
 
     # Add the CallbackQueryHandler with a different variable name to avoid conflict
     callback_query_handler_obj = CallbackQueryHandler(callback_query_handler)
