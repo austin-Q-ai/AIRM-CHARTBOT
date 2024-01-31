@@ -2,6 +2,7 @@
 from telegram.ext import ContextTypes
 from telegram import Update
 from .stactic_commands import bot_commands
+from .user_settings import *
 
 async def callback_query_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.callback_query
@@ -20,6 +21,6 @@ async def callback_query_handler(update: Update, context: ContextTypes.DEFAULT_T
     elif query.data == 'close_settings':
         await query.message.delete()
 
-    # elif query.data == 'settings':
-    #     # Call settings function directly when "Settings" button is pressed
-    #     await settings(update, context)
+    elif query.data.startswith('settings'):
+        # Call settings function directly when "Settings" button is pressed
+        await handling_settings_callback(update, context)
