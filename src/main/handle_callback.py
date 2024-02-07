@@ -3,6 +3,7 @@ from telegram.ext import ContextTypes
 from telegram import Update
 from .stactic_commands import bot_commands
 from .user_settings import *
+from .main_commands import *
 
 async def callback_query_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.callback_query
@@ -24,3 +25,19 @@ async def callback_query_handler(update: Update, context: ContextTypes.DEFAULT_T
     elif query.data.startswith('settings'):
         # Call settings function directly when "Settings" button is pressed
         await handling_settings_callback(update, context)
+    
+    elif query.data.startswith('heatmap_'):
+        # Call settings function directly when "Settings" button is pressed
+        await heatmap_callback_handle(update, context)
+
+    elif query.data.startswith('dx_'):
+        # Call settings function directly when "Settings" button is pressed
+        await dx_callback_handle(update, context)
+    
+    elif query.data.startswith('i_'):
+        # Call settings function directly when "Settings" button is pressed
+        await i_callback_handle(update, context)
+
+    elif query.data.startswith('chart_'):
+        # Call settings function directly when "Settings" button is pressed
+        await chart_callback_handle(update, context)

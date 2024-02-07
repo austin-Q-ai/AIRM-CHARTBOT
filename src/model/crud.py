@@ -6,7 +6,7 @@ Base.metadata.create_all(bind=engine)
 db = SessionLocal()
 
 def create_user(chat_id:int):
-    db_user = User(id=chat_id, indicators=None, interval="1h", style="candle", timezone="America/New_York", scale="regular", exchange="Binance", pic_format="png")
+    db_user = User(id=chat_id, indicators=None, interval="1h", style="candle", timezone="America/New_York", chain="ethereum")
     try:
         db.add(db_user)
         db.commit()
@@ -51,32 +51,32 @@ def update_timezone(id:int, timezone:str):
         return False
     return user
 
-# Define the scale updating function
-def update_scale(id:int, scale:str):
-    user = db.query(User).filter(User.id == id).update({"scale" : scale})
+# # Define the scale updating function
+# def update_scale(id:int, scale:str):
+#     user = db.query(User).filter(User.id == id).update({"scale" : scale})
+#     try:
+#         db.commit()
+#     except:
+#         return False
+#     return user
+
+# Define the default chain updating function
+def update_chain(id:int, chain:str):
+    user = db.query(User).filter(User.id == id).update({"chain" : chain})
     try:
         db.commit()
     except:
         return False
     return user
 
-# Define the exchange updating function
-def update_exchange(id:int, exchange:str):
-    user = db.query(User).filter(User.id == id).update({"exchange" : exchange})
-    try:
-        db.commit()
-    except:
-        return False
-    return user
-
-# Define the pic_format updating function
-def update_pic_format(id:int, pic_format:str):
-    user = db.query(User).filter(User.id == id).update({"pic_format" : pic_format})
-    try:
-        db.commit()
-    except:
-        return False
-    return user
+# # Define the pic_format updating function
+# def update_pic_format(id:int, pic_format:str):
+#     user = db.query(User).filter(User.id == id).update({"pic_format" : pic_format})
+#     try:
+#         db.commit()
+#     except:
+#         return False
+#     return user
 
 def get_user_by_id(id:int):
     user = db.query(User).filter(User.id == id).first()
@@ -91,3 +91,9 @@ def delete_user(id:int):
         return True
     except:
         return False
+
+def count_user():
+    user = db.query(User).count()
+    if not user:
+        return False
+    return user

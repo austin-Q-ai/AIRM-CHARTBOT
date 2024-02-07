@@ -1,16 +1,37 @@
 # Import required classes from the library
-import os
+import os, requests
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler
 from dotenv import load_dotenv
 
 from src.main.stactic_commands import *
 from src.main.handle_callback import *
 from src.main.user_settings import *
+from src.main.main_commands import *
 
 load_dotenv(dotenv_path='.env')
 
 # Use your own bot token here
 TOKEN = os.getenv('TG_TOKEN')
+API_URL = f"https://api.telegram.org/bot{TOKEN}/setMyCommands"
+
+commands = [
+    {"command": "start", "description": "Displays help text"},
+    {"command": "commands", "description": "Displays all available commands"},
+    {"command": "version", "description": "Displays latest version of the bot"},
+    {"command": "help", "description": "How to use the bot"},
+    {"command": "disclaimer", "description": "How to use the bot"},
+    {"command": "about", "description": "Displays information about AIRM"},
+    {"command": "whoami", "description": "Displays the data that is sent to the bot"},
+    {"command": "changelog", "description": "Displays a concise changelog of all versions"},
+    {"command": "dm", "description": "Engages with bot in dms"},
+    {"command": "dx", "description": "Displays chart image based on given symbol and (optional) timeframe."},
+    {"command": "i", "description": "Displays extensive token info based on given symbol."},
+    {"command": "chart", "description": "Displays either the $AIRM chart or the chart of the symbol that is set by a group admin."},
+    {"command": "heatmap", "description": "This command gives you a birds-eye view of crypto. Segment by type of coin, market cap, recent performance and more."},
+    {"command": "settings", "description": "Displays all your personal settings and the ability to change them (can be used via DM)"},
+]
+
+response = requests.post(API_URL, json={"commands": commands})
 
 # Main function update
 def main() -> None:
@@ -59,6 +80,18 @@ def main() -> None:
     # Add the /stats command handler to the application
     settings_handler = CommandHandler('settings', settings_dashboard)
     application.add_handler(settings_handler)
+
+    dx_handler = CommandHandler('dx', dx_handle)
+    application.add_handler(dx_handler)
+
+    i_handler = CommandHandler('i', i_handle)
+    application.add_handler(i_handler)
+
+    chart_handler = CommandHandler('chart', chart_handle)
+    application.add_handler(chart_handler)
+    
+    heatmap_handler = CommandHandler('heatmap', heatmap_handle)
+    application.add_handler(heatmap_handler)
 
     # Add the CallbackQueryHandler with a different variable name to avoid conflict
     callback_query_handler_obj = CallbackQueryHandler(callback_query_handler)
