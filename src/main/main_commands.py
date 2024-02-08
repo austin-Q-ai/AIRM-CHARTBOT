@@ -170,24 +170,26 @@ async def dx_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     sent_message = await message.reply_text(f'Searching info of `{user_input}` on {user.chain} for {user.interval} period', parse_mode=ParseMode.MARKDOWN)
 
     chain_name, info = dx_get_info(default_chain=user.chain, user_input=user_input)
+    print(chain_name, info)
+    
     if info:
         if chain_name == True:
-            await dx_final_response(message=sent_message, chain_info=info, interval=user.interval, indicators=user.indicators, style=user.style)
+            await dx_final_response(message=sent_message, context=context, chain_info=info, interval=user.interval, indicators=user.indicators, style=user.style)
         else:
-            await sent_message.edit_text(f'⚠ There isn\'t info of {user_input} on {user.chain}. So researching on {chain_name}.')
-            await dx_select_platform(message=sent_message, chain_info=info, user_input=user_input, interval=user.interval)
+            # await sent_message.edit_text(f'⚠ There isn\'t info of {user_input} on {user.chain}. So researching on {chain_name}.')
+            await dx_select_platform(message=sent_message, context=context, chain_info=info, user_input=user_input, interval=user.interval, indicators=user.indicators, style=user.style)
     else:
-        await sent_message.edit_text(f'❌ The {"symbol" if len(user_input) > 20 else "address"} `{user_input}` you entered is either not available on supported exchanges or could not be matched to a project by our search algorithm. Please contact me directly @fieryfox617',parse_mode=ParseMode.MARKDOWN)
+        await sent_message.edit_text(f'❌ This {"symbol" if len(user_input) > 20 else "address"} you entered is either not available on supported exchanges or could not be matched to a project by our search algorithm. Please contact me directly @fieryfox617',parse_mode=ParseMode.MARKDOWN)
         await asyncio.sleep(5)
         await sent_message.delete()
         # sent_message.reply_photo()
 
-async def dx_final_response(message: Update.message, chain_info:dict, interval:str, indicators:str, style:str) -> None:
+async def dx_final_response(message: Update.message, context: ContextTypes.DEFAULT_TYPE, chain_info:dict, interval:str, indicators:str, style:str) -> None:
     file_path = "screen.png"
     await message.edit_text(f'Generating chart for `{chain_info.pair_address}` on {chain_info.chain_id} for {interval} period', parse_mode=ParseMode.MARKDOWN)
     picture = get_picture(chain=chain_info.chain_id, address=chain_info.pair_address, file_path=file_path, indicators=indicators, style=style)
     if picture != 0:
-        await message.edit_text(f'❌ The {"symbol" if len(chain_info.pair_address) > 20 else "address"} `{chain_info.pair_address}` you entered is either not available on supported exchanges or could not be matched to a project by our search algorithm. Please contact me directly @fieryfox617',parse_mode=ParseMode.MARKDOWN)
+        await message.edit_text(f'❌ This {"symbol" if len(chain_info.pair_address) > 20 else "address"} you entered is either not available on supported exchanges or could not be matched to a project by our search algorithm. Please contact me directly @fieryfox617',parse_mode=ParseMode.MARKDOWN)
         await asyncio.sleep(5)
         await message.delete()
         return None
@@ -227,15 +229,16 @@ async def dx_final_response(message: Update.message, chain_info:dict, interval:s
     reply_markup = InlineKeyboardMarkup([keyboard])
     await message.delete()
     with open(file_path, 'rb') as f:
-        await message.reply_photo(
+        await context.bot.send_photo(
             photo = f,
-            caption=f'📌 Chain: {chain} ({interval})\n\n🏦 DEX Platform: {chain_info.dex_id}\n\n💸 Pair: {pair}\n\n💰 Price USD: {chain_info.price_usd if chain_info.price_usd else '-'} {f'({price_chain}%)' if chain_info.price_usd else ''}\n🌊 Volume: ${volume}\n💦 Liquidity: Total: ${format_number(liquidity.usd)}\n',
+            chat_id=message.chat_id,
+            caption=f'📌 Chain: {chain} ({interval})\n\n🏦 DEX Platform: {chain_info.dex_id}\n\n💸 Pair: {pair}\n\n💰 Price USD: {chain_info.price_usd if chain_info.price_usd else '-'} {f'({price_chain}%)' if chain_info.price_usd else ''}\n🌊 Volume: {'--' if volume == 0 else f'${volume}'}\n💦 Liquidity: Total: ${format_number(liquidity.usd)}\n',
             parse_mode=ParseMode.HTML,
             reply_markup=reply_markup
         )
         log_function("chart", chain_info.chain_id, chain_info.pair_address)
 
-async def dx_select_platform(message: Update.message, chain_info:dict, user_input:str, interval) ->None:
+async def dx_select_platform(message: Update.message, context: ContextTypes.DEFAULT_TYPE, chain_info:dict, user_input:str, interval:str, indicators:str, style:str) ->None:
     platforms = {}
     for i in chain_info:
         if len(i) < 25:
@@ -245,7 +248,7 @@ async def dx_select_platform(message: Update.message, chain_info:dict, user_inpu
     keys = list(platforms.keys())
     back_button_flag=True
     if len(keys) == 1:
-        await dx_final_response(message=message, chain_info=platforms[keys[0]], interval=interval)
+        await dx_final_response(message=message, context=context, chain_info=platforms[keys[0]], interval=interval, indicators=indicators, style=style)
     else:
         for i in range(0, len(keys), 3):
             rows = []
@@ -280,12 +283,12 @@ async def dx_callback_handle(update: Update, context: ContextTypes.DEFAULT_TYPE)
         chat_id = message.chat_id
         user = get_user_by_id(chat_id)
         await message.delete()
-        sent_message = await message.reply_text(f'Searching info of `{pair_address}` on {chain_id} for {interval} period', parse_mode=ParseMode.MARKDOWN)
+        sent_message = await context.bot.send_message(text= f'Searching info of `{pair_address}` on {chain_id} for {interval} period', chat_id=message.chat_id, parse_mode=ParseMode.MARKDOWN)
         chain_name, info = dx_get_info(default_chain=chain_id, user_input=pair_address)
         if chain_name == True:
-            await dx_final_response(message=sent_message, chain_info=info, interval=interval, indicators=user.indicators, style=user.style)
+            await dx_final_response(message=sent_message, context=context, chain_info=info, interval=interval, indicators=user.indicators, style=user.style)
         else:
-            await dx_select_platform(message=sent_message, chain_info=info, user_input=pair_address, interval=interval)
+            await dx_select_platform(message=sent_message, context=context, chain_info=info, user_input=pair_address, interval=interval, indicators=user.indicators, style=user.style)
 
 
 async def i_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -316,16 +319,16 @@ async def i_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     chain_name, info = dx_get_info(default_chain=user.chain, user_input=user_input)
     if info:
         if chain_name == True:
-            await i_final_response(message=sent_message, chain_info=info, interval=user.interval)
+            await i_final_response(message=sent_message,context=context, chain_info=info, interval=user.interval)
         else:
-            await sent_message.edit_text(f'⚠ There isn\'t info of {user_input} on {user.chain}. So researching on {chain_name}.')
-            await i_select_platform(message=sent_message, chain_info=info, user_input=user_input, interval=user.interval)
+            # await sent_message.edit_text(f'⚠ There isn\'t info of {user_input} on {user.chain}. So researching on {chain_name}.')
+            await i_select_platform(message=sent_message, context=context, chain_info=info, user_input=user_input, interval=user.interval)
     else:
-        await sent_message.edit_text(f'❌ The {"symbol" if len(user_input) > 20 else "address"} `{user_input}` you entered is either not available on supported exchanges or could not be matched to a project by our search algorithm. Please contact me directly @fieryfox617',parse_mode=ParseMode.MARKDOWN)
+        await sent_message.edit_text(f'❌ This {"symbol" if len(user_input) > 20 else "address"} you entered is either not available on supported exchanges or could not be matched to a project by our search algorithm. Please contact me directly @fieryfox617',parse_mode=ParseMode.MARKDOWN)
         await asyncio.sleep(5)
         await sent_message.delete()
 
-async def i_final_response(message: Update.message, chain_info:dict, interval:str) -> None:
+async def i_final_response(message: Update.message, context: ContextTypes.DEFAULT_TYPE, chain_info:dict, interval:str) -> None:
     chain = chains_default_name[chain_info.chain_id]
     pair = f'<a href=\'{chain_info.url}\'>{chain_info.base_token.name} / {chain_info.quote_token.name}</a>'
     price = chain_info.price_usd if chain_info.price_usd else None
@@ -362,14 +365,14 @@ async def i_final_response(message: Update.message, chain_info:dict, interval:st
     reply_markup = InlineKeyboardMarkup([keyboard])
 
     await message.edit_text(
-        text=f'📌 Chain: {chain} ({interval})\n\n🏦 DEX Platform: {chain_info.dex_id}\n\n💸 Pair: {pair} \n{created_date if created_date else ""}\n💰 Price USD: {chain_info.price_usd if chain_info.price_usd else '-'} {f'({price_chain}%)' if chain_info.price_usd else ''}\n🛒 PairtransactionCount: Buy: {format_number(pair_count.buys)} / Sell: {format_number(pair_count.sells)}\n\n🌊 Volume: ${volume}\n\n💦 Liquidity: Total: ${format_number(liquidity.usd)}\n     Base: {format_number(liquidity.base)}({chain_info.base_token.symbol}) / Quote: {format_number(liquidity.quote)}({chain_info.quote_token.symbol})',
+        text=f'📌 Chain: {chain} ({interval})\n\n🏦 DEX Platform: {chain_info.dex_id}\n\n💸 Pair: {pair} \n{created_date if created_date else ""}\n💰 Price USD: {chain_info.price_usd if chain_info.price_usd else '-'} {f'({price_chain}%)' if chain_info.price_usd else ''}\n🛒 PairtransactionCount: Buy: {format_number(pair_count.buys)} / Sell: {format_number(pair_count.sells)}\n\n🌊 Volume: {'--' if volume == 0 else f'${volume}'}\n\n💦 Liquidity: Total: ${format_number(liquidity.usd)}\n     Base: {format_number(liquidity.base)}({chain_info.base_token.symbol}) / Quote: {format_number(liquidity.quote)}({chain_info.quote_token.symbol})',
         parse_mode=ParseMode.HTML,
         reply_markup=reply_markup,
         disable_web_page_preview=True
     )
     log_function("general", chain_info.chain_id, chain_info.pair_address)
 
-async def i_select_platform(message: Update.message, chain_info:dict, user_input:str, interval) ->None:
+async def i_select_platform(message: Update.message, context: ContextTypes.DEFAULT_TYPE, chain_info:dict, user_input:str, interval) ->None:
     platforms = {}
     for i in chain_info:
         if len(i) < 25:
@@ -379,7 +382,7 @@ async def i_select_platform(message: Update.message, chain_info:dict, user_input
     keys = list(platforms.keys())
     back_button_flag=True
     if len(keys) == 1:
-        await i_final_response(message=message, chain_info=platforms[keys[0]], interval=interval)
+        await i_final_response(message=message, context=context, chain_info=platforms[keys[0]], interval=interval)
     else:
         for i in range(0, len(keys), 3):
             rows = []
@@ -412,13 +415,13 @@ async def i_callback_handle(update: Update, context: ContextTypes.DEFAULT_TYPE)-
         pair_address = text.split("_")[2]
         interval = text.split("_")[3]
         await message.delete()
-        sent_message = await message.reply_text(f'Searching info of `{pair_address}` on {chain_id} for {interval} period', parse_mode=ParseMode.MARKDOWN)
+        sent_message = await context.bot.send_message(text=f'Searching info of `{pair_address}` on {chain_id} for {interval} period', chat_id=message.chat_id, parse_mode=ParseMode.MARKDOWN)
         
         chain_name, info = dx_get_info(default_chain=chain_id, user_input=pair_address)
         if chain_name == True:
-            await i_final_response(message=sent_message, chain_info=info, interval=interval)
+            await i_final_response(message=sent_message, context=context, chain_info=info, interval=interval)
         else:
-            await i_select_platform(message=sent_message, chain_info=info, user_input=pair_address, interval=interval)
+            await i_select_platform(message=sent_message, context=context, chain_info=info, user_input=pair_address, interval=interval)
 
 
 async def chart_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -449,21 +452,21 @@ async def chart_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     chain_name, info = dx_get_info(default_chain=user.chain, user_input=user_input)
     if info:
         if chain_name == True:
-            await chart_final_response(message=sent_message, chain_info=info, interval=user.interval, indicators=user.indicators, style=user.style)
+            await chart_final_response(message=sent_message, context=context, chain_info=info, interval=user.interval, indicators=user.indicators, style=user.style)
         else:
-            await sent_message.edit_text(f'⚠ There isn\'t info of {user_input} on {user.chain}. So researching on {chain_name}.')
-            await chart_select_platform(message=sent_message, chain_info=info, user_input=user_input, interval=user.interval)
+            # await sent_message.edit_text(f'⚠ There isn\'t info of {user_input} on {user.chain}. So researching on {chain_name}.')
+            await chart_select_platform(message=sent_message, context=context, chain_info=info, user_input=user_input, interval=user.interval, indicators=user.indicators, style=user.style)
     else:
-        await sent_message.edit_text(f'❌ The {"symbol" if len(user_input) > 20 else "address"} `{user_input}` you entered is either not available on supported exchanges or could not be matched to a project by our search algorithm. Please contact me directly @fieryfox617',parse_mode=ParseMode.MARKDOWN)
+        await sent_message.edit_text(f'❌ This {"symbol" if len(user_input) > 20 else "address"} you entered is either not available on supported exchanges or could not be matched to a project by our search algorithm. Please contact me directly @fieryfox617',parse_mode=ParseMode.MARKDOWN)
         await asyncio.sleep(5)
         await sent_message.delete()
         # sent_message.reply_photo()
 
-async def chart_final_response(message: Update.message, chain_info:dict, interval:str, indicators:str, style:str) -> None:
+async def chart_final_response(message: Update.message,context: ContextTypes.DEFAULT_TYPE, chain_info:dict, interval:str, indicators:str, style:str) -> None:
     file_path = "screen.png"
     picture = get_picture(chain=chain_info.chain_id, address=chain_info.pair_address, file_path=file_path, indicators=indicators, style=style)
     if picture != 0:
-        await message.edit_text(f'❌ The {"symbol" if len(chain_info.pair_address) > 20 else "address"} `{chain_info.pair_address}` you entered is either not available on supported exchanges or could not be matched to a project by our search algorithm. Please contact me directly @fieryfox617',parse_mode=ParseMode.MARKDOWN)
+        await message.edit_text(f'❌ This {"symbol" if len(chain_info.pair_address) > 20 else "address"} you entered is either not available on supported exchanges or could not be matched to a project by our search algorithm. Please contact me directly @fieryfox617',parse_mode=ParseMode.MARKDOWN)
         await asyncio.sleep(5)
         await message.delete()
         return None
@@ -474,13 +477,14 @@ async def chart_final_response(message: Update.message, chain_info:dict, interva
     reply_markup = InlineKeyboardMarkup([keyboard])
     await message.delete()
     with open(file_path, 'rb') as f:
-        await message.reply_photo(
+        await context.bot.send_photo(
             photo = f,
+            chat_id=message.chat_id,
             reply_markup=reply_markup
         )
         log_function("chart", chain_info.chain_id, chain_info.pair_address)
 
-async def chart_select_platform(message: Update.message, chain_info:dict, user_input:str, interval) ->None:
+async def chart_select_platform(message: Update.message, context: ContextTypes.DEFAULT_TYPE, chain_info:dict, user_input:str, interval:str, indicators:str, style:str) ->None:
     platforms = {}
     for i in chain_info:
         if len(i) < 25:
@@ -490,7 +494,7 @@ async def chart_select_platform(message: Update.message, chain_info:dict, user_i
     keys = list(platforms.keys())
     back_button_flag=True
     if len(keys) == 1:
-        await chart_final_response(message=message, chain_info=platforms[keys[0]], interval=interval)
+        await chart_final_response(message=message, context=context, chain_info=platforms[keys[0]], interval=interval, indicators=indicators, style=style)
     else:
         for i in range(0, len(keys), 3):
             rows = []
@@ -525,12 +529,12 @@ async def chart_callback_handle(update: Update, context: ContextTypes.DEFAULT_TY
         chat_id = message.chat_id
         user = get_user_by_id(chat_id)
         await message.delete()
-        sent_message = await message.reply_text(f'Generating chart for token-pair(`{pair_address}`) on {chain_id} for {interval} period', parse_mode=ParseMode.MARKDOWN)
+        sent_message = await context.bot.send_message(text=f'Generating chart for token-pair(`{pair_address}`) on {chain_id} for {interval} period',chat_id=message.chat_id, parse_mode=ParseMode.MARKDOWN)
         chain_name, info = dx_get_info(default_chain=chain_id, user_input=pair_address)
         if chain_name == True:
-            await chart_final_response(message=sent_message, chain_info=info, interval=interval, indicators=user.indicators, style=user.style)
+            await chart_final_response(message=sent_message, context=context, chain_info=info, interval=interval, indicators=user.indicators, style=user.style)
         else:
-            await chart_select_platform(message=sent_message, chain_info=info, user_input=pair_address, interval=interval)
+            await chart_select_platform(message=sent_message, context=context, chain_info=info, user_input=pair_address, interval=interval, indicators=user.indicators, style=user.style)
 
 
 async def heatmap_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -547,7 +551,7 @@ async def heatmap_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
             'Which datasource do you like to use?', reply_markup=reply_markup
         )
 
-async def heatmap_blocksize_handle(message: Update.message, datasource:str) -> None:
+async def heatmap_blocksize_handle(message: Update.message, context: ContextTypes.DEFAULT_TYPE, datasource:str) -> None:
     
     # Define the response message and buttons
     keyboard = []
@@ -569,7 +573,7 @@ async def heatmap_callback_handle(update: Update, context: ContextTypes.DEFAULT_
         await message.delete()
     else:
         if len(text.split("_")) == 2:
-            await heatmap_blocksize_handle(message=message, datasource=datasource)
+            await heatmap_blocksize_handle(message=message, context=context, datasource=datasource)
         else:
             blocksize = "_".join(text.split("_")[2::])
             await message.edit_text(f'Generating heatmap by {candidate_blocksize[blocksize]} on {candidate_datasource[datasource]}')
@@ -584,8 +588,9 @@ async def heatmap_callback_handle(update: Update, context: ContextTypes.DEFAULT_
             reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton(text="🔄", callback_data=f'heatmap_{datasource}_{blocksize}')]])
             await message.delete()
             with open(heatmap_path, 'rb') as f:
-                await message.reply_photo(
+                await context.bot.send_photo(
                     photo=f,
+                    chat_id=message.chat_id,
                     caption=f'🕋 Datasource: {candidate_datasource[datasource]}\n📐 Blocksize: {candidate_blocksize[blocksize]}',
                     reply_markup=reply_markup
                 )

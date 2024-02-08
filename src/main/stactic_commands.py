@@ -13,17 +13,17 @@ async def bot_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if not get_user_by_id(chat_id):
         create_user(chat_id)
     keyboard = [[
-        InlineKeyboardButton("🦾 Add me to your group", url="telegram.me/AIRMCHATBOT?startgroup=true"),
-        InlineKeyboardButton("🪄 Commands", callback_data='commands'),
+        InlineKeyboardButton("🦾 Add me to your group", url="https://t.me/AIRMCHARTBOT?startgroup=true"),
+        InlineKeyboardButton("🪄 Features", callback_data='features'),
         InlineKeyboardButton("🛠 Settings", callback_data='settings'),
     ]]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
-        "Hello there! Meet Telegram's ultimate Charting Bot.\n\n"
-        "📊 Dive into charts for 22,000+ crypto tokens across diverse blockchains!\n\n"
-        "🛠 Tailor everything, from timezones to exchanges and even my appearance!\n\n"
-        "➕ Join any group or have a private chat with me.\n\n"
-        "💰 Unlock advertising opportunities on this powerful platform!", reply_markup=reply_markup
+        "Hey there! Step into the world of Telegram's premier Charting Bot.\n\n"
+        "📊 Dive into a sea of charts covering 22,000+ crypto tokens across diverse blockchains!\n\n"
+        "🛠 Personalize your experience by adjusting settings such as timezones, exchanges, and even my appearance!\n\n"
+        "➕ Join any group or engage in private conversations with me.\n\n"
+        "💰 Seize advertising opportunities on this powerful platform!\n\n", reply_markup=reply_markup
     )
 
 
@@ -31,9 +31,9 @@ async def bot_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def bot_commands(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     message = update.message or update.callback_query.message  # Get the message object
     commands_text = (
-        "🗳 Bot Commands\n"
+        "🗳 Bot Features\n"
         "/start - Displays help text\n"
-        "/commands - Displays all available commands\n"
+        "/features - Displays all available features\n"
         "/version - Displays latest version of the bot\n"
         "/help - How to use the bot\n"
         "/disclaimer - How to use the bot\n"

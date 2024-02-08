@@ -16,7 +16,7 @@ API_URL = f"https://api.telegram.org/bot{TOKEN}/setMyCommands"
 
 commands = [
     {"command": "start", "description": "Displays help text"},
-    {"command": "commands", "description": "Displays all available commands"},
+    {"command": "features", "description": "Displays all available bot features"},
     {"command": "version", "description": "Displays latest version of the bot"},
     {"command": "help", "description": "How to use the bot"},
     {"command": "disclaimer", "description": "How to use the bot"},
@@ -29,6 +29,7 @@ commands = [
     {"command": "chart", "description": "Displays either the $AIRM chart or the chart of the symbol that is set by a group admin."},
     {"command": "heatmap", "description": "This command gives you a birds-eye view of crypto. Segment by type of coin, market cap, recent performance and more."},
     {"command": "settings", "description": "Displays all your personal settings and the ability to change them (can be used via DM)"},
+    {"command": "stats", "description": "Displays the bot stats"}
 ]
 
 response = requests.post(API_URL, json={"commands": commands})
@@ -41,8 +42,8 @@ def main() -> None:
     start_handler = CommandHandler('start', bot_start)
     application.add_handler(start_handler)
 
-    # Existing commands handler (triggered by typing "/commands")
-    commands_handler = CommandHandler('commands', bot_commands)
+    # Existing commands handler (triggered by typing "/features")
+    commands_handler = CommandHandler('features', bot_commands)
     application.add_handler(commands_handler)
 
     # Version command handler (adds the functionality for '/version')

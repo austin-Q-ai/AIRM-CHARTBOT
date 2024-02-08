@@ -12,7 +12,7 @@ async def callback_query_handler(update: Update, context: ContextTypes.DEFAULT_T
     await query.answer()
 
     # Check if the callback_data matches 'commands'
-    if query.data == 'commands':
+    if query.data == 'features':
         await bot_commands(update, context)
 
     # Below is a placeholder for how you could handle the 'close_heatmap' button press

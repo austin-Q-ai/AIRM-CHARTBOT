@@ -6,11 +6,11 @@ client = DexscreenerClient()
 
 def get_token_pair_address(chain, address):
     try:
-        info = client.get_token_pair("solana", "Bzd6HtjjBydTqjXpk6oqkx8XzMCsxXoSJwoxiPT1uLKq")
+        info = client.get_token_pair(chain, address)
         return info
     except:
         try:
-            info = client.get_token_pairs("Bzd6HtjjBydTqjXpk6oqkx8XzMCsxXoSJwoxiPT1uLKq")
+            info = client.get_token_pairs(address)
             return info
         except:
             return None
@@ -49,7 +49,7 @@ def dex_token_address_handle(default_chain, info):
             dex_platforms[i.chain_id] = {i.dex_id:[i]}
     
     if default_chain in dex_platforms:
-        return True, dex_platforms[default_chain]
+        return default_chain, dex_platforms[default_chain]
     
     max_price = 0
     chain_id = ""
