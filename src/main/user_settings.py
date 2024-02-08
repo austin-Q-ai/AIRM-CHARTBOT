@@ -5,11 +5,114 @@ from datetime import datetime
 from telegram.constants import ParseMode
 from ..model.crud import *
 
+default_chain = {
+    'ethereum':'Ethereum',
+    'solana':'Solana',
+    'bsc':'BSC',
+    'arbitrum':'arbitrum',
+    'polygon':'Polygon',
+    'base':'Base',
+    'optimism':'Optimism',
+    'avalanche':'Avalanche',
+    'zksync':'zkSync',
+    'pulsechain':'PulseChain',
+    'mantle':'Mantle',
+    'sui':'Sui',
+    'osmosis':'Osmosis',
+    'manta':'Manta',
+    'canto':'Canto',
+    'aptos':'Aptos',
+    'metis':'Metis',
+    'scroll':'Scroll',
+    'linea':'Linea',
+    'oasissapphire':'Oasis Sapphire',
+    'fantom':'Fantom',
+    'cronos':'Cronos',
+    'mode':'Mode',
+    'celo':'Celo',
+    'sei':'Sei',
+    'moonbeam':'Moonbeam',
+    'kava':'Kava',
+    'zetachain':'ZetaChain',
+    'core':'Core',
+    'astar':'Astar',
+    'polygonzkevm':'Polygon zkEVM',
+    'conflux':'Conflux',
+    'starknet':'Starknet',
+    'near':'NEAR',
+    'filecoin':'Filecoin',
+    'godwoken':'Godwoken',
+    'smartbch':'SmartBCH',
+    'flare':'Flare',
+    'gnosischain':'Gnosis Chain',
+    'evmos':'Evmos',
+    'aurora':'Aurora',
+    'injective':'Injective',
+    'beam':'Beam',
+    'arbitrumnova':'Arbitrum Nova',
+    'acala':'Acala',
+    'zkfair':'ZKFair',
+    'opbnb':'opBNB',
+    'telos':'Telos',
+    'avalanchedfk':'Avalanche DFK',
+    'goerli':'Goerli',
+    'moonriver':'Moonriver',
+    'iotex':'IoTeX',
+    'kcc':'KCC',
+    'wanchain':'Wanchain',
+    'boba':'Boba',
+    'velas':'Velas',
+    'okc':'OKC',
+    'elastos':'Elastos',
+    'meter':'Meter',
+    'shibarium':'Shibarium',
+    'ethereumclassic':'Ethereum Classic',
+    'neonevm':'Neon EVM',
+    'sxnetwork':'SX Network',
+    'fuse':'Fuse',
+    'oasisemerald':'Oasis Emerald',
+    'harmony':'Harmony',
+    'tombchain':'Tomb Chain',
+    'milkomedacardano':'Milkomedacardano',
+    'stepnetwork':'Step Network',
+    'thundercore':'ThunderCore',
+    'dogechain':'Dogechain',
+    'bitgert':'Bitgert',
+    'ethereumpow':'EthereumPoW',
+    'loopnetwork':'Loop Network',
+    'energi':'Energi',
+    'kardiachain':'KardiaChain',
+    'combo':'COMBO',
+    'redlightchain':'Redlight Chain',
+    'syscoin':'Syscoin',
+    'ethereumfair':'EthereumFair'
+}
+    
+default_indicators = {
+  'OBV': 'On Balance Volume', 
+  'ADI': 'Accumulation/Distribution',
+  'ADX': 'Average Directional Index',
+  'AO': 'Aroon',
+  'MACD': 'Moving Average Convergence Divergence',
+  'RSI': 'Relative Strength Index',
+  'SO': 'Stochastic',
+  'BB': 'Bollinger Bands',
+  'IC': 'Ichimoku Cloud',
+  'MA': 'MA Cross',
+  'MAE': 'Moving Average Exponential',
+  'MAM': 'Moving Average Multiple',
+  'VWAP': 'Volume Weighted Average Price',
+  'VO': 'Volume Oscillator'
+}
+
 # Define the settigns command callback function
 async def settings_dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Define the response message and buttons
     message = update.message or update.callback_query.message  # Get the message object
-    query_data = update.callback_query.data or "settings"
+    try:
+        query_data = update.callback_query.data
+    except:
+        query_data = "settings"
     chat_id = message.chat_id
     user = get_user_by_id(chat_id)
     if not user:
@@ -17,31 +120,27 @@ async def settings_dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE)
     
     keyboard = [[
         InlineKeyboardButton("📈 Indicators", callback_data='settings_indicators'),
-        InlineKeyboardButton("📊 Interval", callback_data='settings_interval'),
+        InlineKeyboardButton("⏳ Interval", callback_data='settings_interval'),
     ],
     [
-        InlineKeyboardButton("⏱ Style", callback_data='settings_style'),
-        InlineKeyboardButton("🕙 Timezone", callback_data='settings_timezone'),
+        InlineKeyboardButton("🎨 Style", callback_data='settings_style'),
+        InlineKeyboardButton("🌏 Timezone", callback_data='settings_timezone'),
     ],
     [
-        InlineKeyboardButton("⚖ Scale", callback_data='settings_scale'),
-        InlineKeyboardButton("🏞 Format", callback_data='settings_format'),
-    ],
-    [
-        InlineKeyboardButton("🏛 Exchange", callback_data='settings_exchange')
+        InlineKeyboardButton("🔗 Default Chain", callback_data='settings_chain'),
     ],
     [
         InlineKeyboardButton("✖ Close Settings", callback_data='close_settings')
     ]]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    
+    keyboard = []
     if query_data == "settings_back":
         await message.edit_text(
-            f'Current settings:\nIndicators: {user.indicators if user.indicators else ""}\nInterval: {user.interval}\nStyle: {user.style}\nTimezone: {user.timezone}\nScale: {user.scale}\nFormat: {user.pic_format}\nExchange: {user.exchange}', reply_markup=reply_markup
+            f'Current settings:\n\n📈 Indicators: {user.indicators if user.indicators else ""}\n⏳ Interval: {user.interval}\n🎨 Style: {user.style}\n🌏 Timezone: {user.timezone}\n🔗 Default Chain: {default_chain[user.chain]}', reply_markup=reply_markup
         )
     else:
         await message.reply_text(
-            f'Current settings:\nIndicators: {user.indicators if user.indicators else ""}\nInterval: {user.interval}\nStyle: {user.style}\nTimezone: {user.timezone}\nScale: {user.scale}\nFormat: {user.pic_format}\nExchange: {user.exchange}', reply_markup=reply_markup
+            f'Current settings:\n\n📈 Indicators: {user.indicators if user.indicators else ""}\n⏳ Interval: {user.interval}\n🎨 Style: {user.style}\n🌏 Timezone: {user.timezone}\n🔗 Default Chain: {default_chain[user.chain]}', reply_markup=reply_markup
         )
 
 # Define the Indicators command callback function
@@ -52,32 +151,17 @@ async def indicators_dashboard(update: Update, context: ContextTypes.DEFAULT_TYP
     user = get_user_by_id(chat_id)
     if not user:
         user = create_user(chat_id) 
-    indcators = {
-        'OBV': "On-balance Volume (OBV)", 
-        'ADI': "Accunulation/Distribution line",
-        'ADX': "Average Directional Index",
-        'AO': "Aroon Oscillator",
-        'MACD': "Moving Average Convergence Divergence (MACD)",
-        'RSI': "Relative Strength Index (RSI)",
-        'SO': "Stochastic Oscillator",
-        'BB': "Bollinger Bands",
-        'IC': "Ichimoku Cloud",
-        'MA': "MA Cross",
-        'MAE': "MA with EMA cross",
-        'SD': "Standard Deviation",
-        'VWAP': "Volune-Weighted Average Price",
-        'VPVR': "Volume Profile Visible Range",
-        'VO': "Volume Oscillator"
-    }
     user_indicators = []
     if user.indicators:
         user_indicators = user.indicators.split(",")
     keyboard = []
-    for i in indcators:
-        title = f'✅ {indcators[i]}' if i in user_indicators else f'☑ {indcators[i]}'
-        call_back = f'settings_indicators_{i}'
-        keyboard.append([InlineKeyboardButton(title, callback_data=call_back)])
-    
+    keys = list(default_indicators.keys())
+    for i in keys:
+        rows = []
+        title1 = f'✅ {default_indicators[i]}' if i in user_indicators else f'☑ {default_indicators[i]}'
+        call_back1 = f'settings_indicators_{i}'
+        rows.append(InlineKeyboardButton(title1, callback_data=call_back1))
+        keyboard.append(rows)
     keyboard.append([InlineKeyboardButton("⬅ Back to Settings", callback_data='settings_back')])
 
     reply_markup = InlineKeyboardMarkup(keyboard)
@@ -97,7 +181,7 @@ async def interval_dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE)
     user = get_user_by_id(chat_id)
     if not user:
         user = create_user(chat_id)
-    time = ["1m", "3m", "5m", "15m", "30m", "45m", "1h", "2h", "3h", "4h", "1D", "1W", "1M", "3M", "6M", "1Y"]
+    time = ["5m", "1h","6h", "1D"]
 
     keyboard = []
     for i in range(0, len(time), 2):
@@ -124,16 +208,30 @@ async def style_dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     if not user:
         user = create_user(chat_id)
     style = ["bar", "candle", "line", "area", "heikinAshi", "hollowCandle", "renko", "lineBreak"]
+    styles = {
+        "bar":"Bars",
+        "candle":"Candles",
+        "hollowCandle":"Hollow candles",
+        "line":"Line",
+        "lineWithMarkers":"Line with markers",
+        "stepline":"Step line",
+        "area":"Area",
+        "hlcArea":"HLC area",
+        "baseline":"Baseline",
+        "hilo":"High-low",
+        "ha":"Heikin Ashi"
+    }
 
     keyboard = []
-    for i in range(0, len(style), 2):
-        title1 = f'🟢 {style[i]}' if style[i] == user.style else f'🔘 {style[i]}'
-        call_back1 = f'settings_style_{style[i]}'
-        title2 = f'🟢 {style[i+1]}' if style[i+1] == user.style else f'🔘 {style[i+1]}'
-        call_back2 = f'settings_style_{style[i+1]}'
-        keyboard.append([InlineKeyboardButton(title1, callback_data=call_back1), InlineKeyboardButton(title2, callback_data=call_back2)])
-    
-    keyboard.append([InlineKeyboardButton("⬅ Back to Settings", callback_data='settings_back')])
+    for i in range(0, len(styles.keys()), 2):
+        title1 = f'🟢 {styles[list(styles.keys())[i]]}' if list(styles.keys())[i] == user.style else f'🔘 {styles[list(styles.keys())[i]]}'
+        call_back1 = f'settings_style_{list(styles.keys())[i]}'
+        try:
+            title2 = f'🟢 {styles[list(styles.keys())[i+1]]}' if list(styles.keys())[i+1] == user.style else f'🔘 {styles[list(styles.keys())[i+1]]}'
+            call_back2 = f'settings_style_{list(styles.keys())[i+1]}'
+            keyboard.append([InlineKeyboardButton(title1, callback_data=call_back1), InlineKeyboardButton(title2, callback_data=call_back2)])
+        except:
+            keyboard.append([InlineKeyboardButton("⬅ Back to Settings", callback_data='settings_back')])
 
     reply_markup = InlineKeyboardMarkup(keyboard)
     
@@ -208,84 +306,38 @@ async def timezone_dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE)
         disable_web_page_preview=True
     )
 
-# Define the scale command callback function
-async def scale_dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    # Define the response message and buttons
-    message = update.callback_query.message  # Get the message object
-    chat_id = message.chat_id
-    user = get_user_by_id(chat_id)
-    if not user:
-        user = create_user(chat_id)
-    scale = ["regular", "percent", "indexedTo100", "logarithmic"]
-
-    keyboard = []
-    for i in range(0, len(scale), 2):
-        title1 = f'🟢 {scale[i]}' if scale[i] == user.scale else f'🔘 {scale[i]}'
-        call_back1 = f'settings_scale_{scale[i]}'
-        title2 = f'🟢 {scale[i+1]}' if scale[i+1] == user.scale else f'🔘 {scale[i+1]}'
-        call_back2 = f'settings_scale_{scale[i+1]}'
-        keyboard.append([InlineKeyboardButton(title1, callback_data=call_back1), InlineKeyboardButton(title2, callback_data=call_back2)])
-    
-    keyboard.append([InlineKeyboardButton("⬅ Back to Settings", callback_data='settings_back')])
-
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    
-    await message.edit_text(
-        "What chart price scale do you want to use?", reply_markup=reply_markup
-    )
-
-# Define the pic_format command callback function
-async def pic_format_dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    # Define the response message and buttons
-    message = update.callback_query.message  # Get the message object
-    chat_id = message.chat_id
-    user = get_user_by_id(chat_id)
-    if not user:
-        user = create_user(chat_id)
-    pic_format = ["png", "jpeg"]
-
-    keyboard = []
-    for i in range(0, len(pic_format), 2):
-        title1 = f'🟢 {pic_format[i]}' if pic_format[i] == user.pic_format else f'🔘 {pic_format[i]}'
-        call_back1 = f'settings_format_{pic_format[i]}'
-        title2 = f'🟢 {pic_format[i+1]}' if pic_format[i+1] == user.pic_format else f'🔘 {pic_format[i+1]}'
-        call_back2 = f'settings_format_{pic_format[i+1]}'
-        keyboard.append([InlineKeyboardButton(title1, callback_data=call_back1), InlineKeyboardButton(title2, callback_data=call_back2)])
-    
-    keyboard.append([InlineKeyboardButton("⬅ Back to Settings", callback_data='settings_back')])
-
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    
-    await message.edit_text(
-        "What image format do you want to use?", reply_markup=reply_markup
-    )
-
 # Define the exchange command callback function
-async def exchange_dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def chain_dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Define the response message and buttons
     message = update.callback_query.message  # Get the message object
     chat_id = message.chat_id
     user = get_user_by_id(chat_id)
     if not user:
         user = create_user(chat_id)
-    exchane = ["Binance", "Bitfinex", "Bitget", "Bithumb", "Bitstamp", "BYbit", "Coinbase", "Gemhi", "Huobi", "Kraken", "Kucoin", "OKX", "PancakeSwap", "SushiSwap", "Uni v2(ETH)", "Uni v3(ARB)", "Uni v3(ETH)", "Uni v3 (MATIC)"]
-
     keyboard = []
-    for i in range(0, len(exchane), 2):
-        title1 = f'🟢 {exchane[i]}' if exchane[i] == user.exchange else f'🔘 {exchane[i]}'
-        call_back1 = f'settings_exchange_{exchane[i]}'
-        title2 = f'🟢 {exchane[i+1]}' if exchane[i+1] == user.exchange else f'🔘 {exchane[i+1]}'
-        call_back2 = f'settings_exchange_{exchane[i+1]}'
-        keyboard.append([InlineKeyboardButton(title1, callback_data=call_back1), InlineKeyboardButton(title2, callback_data=call_back2)])
-    
-    keyboard.append([InlineKeyboardButton("⬅ Back to Settings", callback_data='settings_back')])
+    keys = list(default_chain.keys())
+    back_button_flag = True
+    for i in range(0, len(keys), 4):
+        rows = []
+        for y in range(0,4):
+            try:
+                title = f'🟢 {default_chain[keys[i+y]]}' if keys[i+y] == user.chain else f'🔘 {default_chain[keys[i+y]]}'
+                call_back = f'settings_chain_{keys[i+y]}'
+                rows.append(InlineKeyboardButton(title, callback_data=call_back))
+            except:
+                rows.append(InlineKeyboardButton("⬅ Back to Settings", callback_data='settings_back'))
+                back_button_flag=False
+                break
+        keyboard.append(rows)
+
+    if back_button_flag:
+        keyboard.append([InlineKeyboardButton("⬅ Back to Settings", callback_data='settings_back')])
 
     reply_markup = InlineKeyboardMarkup(keyboard)
     
     await message.edit_text(
-        "What chart price scale do you want to use?", reply_markup=reply_markup
+        "Which chain would you like to use as the default chain?", reply_markup=reply_markup
     )
-
 
 # Define the settgins update function
 async def update_settings(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -295,7 +347,7 @@ async def update_settings(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     commands = query.data.split("_")
     if commands[1] == 'indicators':
         key = commands[2]
-        indcators = ['OBV', 'ADI','ADX','AO','MACD','RSI','SO','BB','IC','MA','MAE','SD','VWAP','VPVR','VO']
+        indcators = list(default_indicators.keys())
         user = get_user_by_id(chat_id)
         if not user:
             user = create_user(chat_id) 
@@ -327,24 +379,13 @@ async def update_settings(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         update_timezone(id=chat_id, timezone="_".join(timezone))
 
         await timezone_dashboard(update, context)
-    elif commands[1] == 'scale':
-        scale = commands[2]
-        update_scale(id=chat_id, scale=scale)
+    elif commands[1] == 'chain':
+        chain = commands[2]
+        update_chain(id=chat_id, chain=chain)
 
-        await scale_dashboard(update, context)
-    elif commands[1] == 'format':
-        pic_format = commands[2]
-        update_pic_format(id=chat_id, pic_format=pic_format)
-
-        await pic_format_dashboard(update, context)
-    elif commands[1] == 'exchange':
-        exchange = commands[2]
-        update_exchange(id=chat_id, exchange=exchange)
-
-        await exchange_dashboard(update, context)
+        await chain_dashboard(update, context)
     else:
         pass
-
 
 async def handling_settings_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
@@ -362,13 +403,29 @@ async def handling_settings_callback(update: Update, context: ContextTypes.DEFAU
             await style_dashboard(update, context)
         elif commands[1] == 'timezone':
             await timezone_dashboard(update, context)
-        elif commands[1] == 'scale':
-            await scale_dashboard(update, context)
-        elif commands[1] == 'format':
-            await pic_format_dashboard(update, context)
-        elif commands[1] == 'exchange':
-            await exchange_dashboard(update, context)
+        elif commands[1] == 'chain':
+            await chain_dashboard(update, context)
     elif len(commands) >= 3:
         await update_settings(update, context)
 
 
+# Define the /stats command handler
+async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    # Get today's date in the format YYYY-MM-DD
+    today_date = datetime.now().strftime("%Y-%m-%d")
+    user_count = count_user()
+    with open("chart_log.txt", 'r', encoding='utf-8') as f:
+        chart_count = len(f.readlines())
+        f.close()
+        
+    with open("log.txt", 'r', encoding='utf-8') as f:
+        imporession_count = len(f.readlines())
+        f.close()
+    # Define the stats message with the current date
+    stats_message = (f'📊 *ChartAI stats for {today_date}:*\n\n'
+                     f'💬 Groups using ChartAI Bot: *719*\n'
+                     f'👤 Unique users: *{user_count}*\n'
+                     f'🪄 Charts generated: *{chart_count}*\n'
+                     f'👁️ User impressions: *{imporession_count}*')
+    # Send the stats message
+    await update.message.reply_text(stats_message, parse_mode=ParseMode.MARKDOWN)
