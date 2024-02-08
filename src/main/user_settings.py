@@ -422,8 +422,8 @@ async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         imporession_count = len(f.readlines())
         f.close()
     # Define the stats message with the current date
-    stats_message = (f'📊 *ChartAI stats for {today_date}:*\n\n'
-                     f'💬 Groups using ChartAI Bot: *719*\n'
+    stats_message = (f'📊 *AI Realm stats for {today_date}:*\n\n'
+                     f'💬 Groups using AI Realm Bot: *719*\n'
                      f'👤 Unique users: *{user_count}*\n'
                      f'🪄 Charts generated: *{chart_count}*\n'
                      f'👁️ User impressions: *{imporession_count}*')

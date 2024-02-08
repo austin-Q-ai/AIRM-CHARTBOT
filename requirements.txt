@@ -4,3 +4,5 @@ sqlalchemy==2.0.18
 python-dotenv>=1.0.0
 dextools-python
 selenium==4.17.2
+
+python-coinmarketcap

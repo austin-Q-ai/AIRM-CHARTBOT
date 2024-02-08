@@ -62,12 +62,12 @@ def dex_token_address_handle(default_chain, info):
         
     return chain_id, dex_platforms[chain_id]
 
-def get_picture(chain, address, file_path, indicators, style):
-    if indicators == None:
-        exec_result = os.system(f'node src\\info\\chart\\index.js {chain} {address} {file_path} nu {style}')
+def get_picture(chain, address, file_path, indicators, style, interval):
+    if indicators == None or indicators == "":
+        exec_result = os.system(f'node src\\info\\chart\\index.js {chain} {address} {file_path} nu {style} {interval}')
         return exec_result
     else:
-        exec_result = os.system(f'node src\\info\\chart\\index.js {chain} {address} {file_path} {indicators} {style}')
+        exec_result = os.system(f'node src\\info\\chart\\index.js {chain} {address} {file_path} {indicators} {style} {interval}')
         return exec_result
 
 def get_heatmap(datasource, blocksize, file_path):
