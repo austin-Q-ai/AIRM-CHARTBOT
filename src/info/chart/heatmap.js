@@ -14,16 +14,16 @@ function sleep(ms) {
 
 (async () => {
 
-  exec("killall chrome");
-  exec(
-    `"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --profile-directory="Default" --remote-debugging-port=9222`
-  );
-  await sleep(1000);
+  // exec("killall chrome");
+  // exec(
+  //   `"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --profile-directory="Default" --remote-debugging-port=9222`
+  // );
+  // await sleep(1000);
 
   const browserURL = "http://127.0.0.1:9222";
 
   const browser = await puppeteer.connect({ browserURL });
-  const page = (await browser.pages())[0];
+  const page = await browser.newPage()
 
   await page.setViewport({ width:1600, height: 900});
 
@@ -40,7 +40,9 @@ function sleep(ms) {
 
     // Take a screenshot of the specified element
     await page.screenshot({ path: file_path, clip: box });
-    await page.close()
+    await page.close();
+    await browser.disconnect();
+    await process.exit(0);
   } catch{
     await page.close()
     await page.close()

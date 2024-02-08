@@ -13,17 +13,19 @@ async def bot_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if not get_user_by_id(chat_id):
         create_user(chat_id)
     keyboard = [[
-        InlineKeyboardButton("🦾 Add me to your group", url="https://t.me/AIRMCHARTBOT?startgroup=true"),
-        InlineKeyboardButton("🪄 Features", callback_data='features'),
+        InlineKeyboardButton("➕ Add me to your group", url="https://t.me/AIRMCHARTBOT?startgroup=true"),
+        InlineKeyboardButton("💠 Features", callback_data='features'),
         InlineKeyboardButton("🛠 Settings", callback_data='settings'),
     ]]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
-        "Hey there! Step into the world of Telegram's premier Charting Bot.\n\n"
-        "📊 Dive into a sea of charts covering 22,000+ crypto tokens across diverse blockchains!\n\n"
-        "🛠 Personalize your experience by adjusting settings such as timezones, exchanges, and even my appearance!\n\n"
-        "➕ Join any group or engage in private conversations with me.\n\n"
-        "💰 Seize advertising opportunities on this powerful platform!\n\n", reply_markup=reply_markup
+        "Welcome aboard!\n"
+        "Introducing Telegram's premier Charting Bot.\n\n"
+        "📈 Explore charts for over 25,000 crypto tokens spanning various blockchains!\n\n"
+        "📢 Engage in group discussions or enjoy private chats with me.\n\n"
+        "🛠 Customize every detail, from time zones to exchanges, and even my interface!\n\n"
+        "💰 Seize advertising prospects on this robust platform and elevate your reach!\n\n"
+        "🔍 Dive deep into comprehensive analysis tools for informed decision-making!", reply_markup=reply_markup
     )
 
 
@@ -31,7 +33,7 @@ async def bot_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def bot_commands(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     message = update.message or update.callback_query.message  # Get the message object
     commands_text = (
-        "🗳 Bot Features\n"
+        "💠 Bot Features\n"
         "/start - Displays help text\n"
         "/features - Displays all available features\n"
         "/version - Displays latest version of the bot\n"

@@ -1,0 +1,3473 @@
+{
+  "id": 270,
+  "name": "Binance",
+  "slug": "binance",
+  "num_market_pairs": 100,
+  "volume_24h": 52025767972.58454,
+  "market_pairs": [
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "BTC",
+        "currency_symbol": "BTC",
+        "currency_id": 1,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 45080.2,
+          "volume_24h_base": 322187.48825848,
+          "volume_24h_quote": 14524276408.19,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 27.90801122890732
+        },
+        "USD": {
+          "price": 45063.77299064,
+          "volume_24h": 14519357167.714163,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 47150,
+      "market_pair": "BTC/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ETH",
+        "currency_symbol": "ETH",
+        "currency_id": 1027,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 2436.41,
+          "volume_24h_base": 2170829.07134678,
+          "volume_24h_quote": 5289029657.72,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 10.162729965290445
+        },
+        "USD": {
+          "price": 2435.52218384,
+          "volume_24h": 5287238311.422329,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 47205,
+      "market_pair": "ETH/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "BTC",
+        "currency_symbol": "BTC",
+        "currency_id": 1,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "FDUSD",
+        "currency_symbol": "FDUSD",
+        "currency_id": 26081,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 44931.06,
+          "volume_24h_base": 78746.20770058,
+          "volume_24h_quote": 3538150582.96719,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 6.808902579653217
+        },
+        "USD": {
+          "price": 45019.44881968,
+          "volume_24h": 3542383857.569706,
+          "depth_negative_two": 6097207.4021822,
+          "depth_positive_two": 7093334.90190606,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1262381,
+      "market_pair": "BTC/FDUSD",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "SOL",
+        "currency_symbol": "SOL",
+        "currency_id": 5426,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 104.432,
+          "volume_24h_base": 24794296.1886395,
+          "volume_24h_quote": 2589317939.572,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 4.975305626381414
+        },
+        "USD": {
+          "price": 104.39394548,
+          "volume_24h": 2588440961.1081386,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 67944,
+      "market_pair": "SOL/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "BTC",
+        "currency_symbol": "BTC",
+        "currency_id": 1,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 45089.29,
+          "volume_24h_base": 46938.06949454,
+          "volume_24h_quote": 2116404227.4794774,
+          "last_updated": "2024-02-08T15:00:02.000Z",
+          "volume_percentage": 4.066614493242404
+        },
+        "USD": {
+          "price": 45080.12743787,
+          "volume_24h": 2115687420.5937877,
+          "depth_negative_two": 10962607.66487672,
+          "depth_positive_two": 14631703.53586916,
+          "last_updated": "2024-02-08T15:00:02.000Z"
+        }
+      },
+      "market_id": 9933,
+      "market_pair": "BTC/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "BTC",
+        "currency_symbol": "BTC",
+        "currency_id": 1,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USD",
+        "currency_symbol": "USD",
+        "currency_id": 2781,
+        "currency_type": "fiat"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 45031.5,
+          "volume_24h_base": 45469.21155191,
+          "volume_24h_quote": 2047546800,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 3.935639741212419
+        },
+        "USD": {
+          "price": 45074.78484313,
+          "volume_24h": 2047546800,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 69639,
+      "market_pair": "BTC/USD",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "FDUSD",
+        "currency_symbol": "FDUSD",
+        "currency_id": 26081,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 1.0021,
+          "volume_24h_base": 1275028924.0940025,
+          "volume_24h_quote": 1277706484.8346,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 2.455464160362353
+        },
+        "USD": {
+          "price": 1.00182469,
+          "volume_24h": 1277474086.720089,
+          "depth_negative_two": 53290138.07045456,
+          "depth_positive_two": 68247307.56334242,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1261061,
+      "market_pair": "FDUSD/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ID",
+        "currency_symbol": "ID",
+        "currency_id": 21846,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.5376,
+          "volume_24h_base": 1923545071.8658855,
+          "volume_24h_quote": 1034097830.6351,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 1.9869915070522624
+        },
+        "USD": {
+          "price": 0.5374041,
+          "volume_24h": 1033747591.0939709,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 1238048,
+      "market_pair": "ID/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ETH",
+        "currency_symbol": "ETH",
+        "currency_id": 1027,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 2438.49,
+          "volume_24h_base": 360033.11436462,
+          "volume_24h_quote": 877937149.046989,
+          "last_updated": "2024-02-08T15:00:02.000Z",
+          "volume_percentage": 1.6869329063485923
+        },
+        "USD": {
+          "price": 2437.9944762,
+          "volume_24h": 877639799.7100955,
+          "depth_negative_two": 11672634.01539124,
+          "depth_positive_two": 17881441.38534283,
+          "last_updated": "2024-02-08T15:00:02.000Z"
+        }
+      },
+      "market_id": 9934,
+      "market_pair": "ETH/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "DYM",
+        "currency_symbol": "DYM",
+        "currency_id": 28932,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 7.069,
+          "volume_24h_base": 95186641.8643231,
+          "volume_24h_quote": 672874371.3389,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 1.2931130293691038
+        },
+        "USD": {
+          "price": 7.06755088,
+          "volume_24h": 672751984.2828289,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1302641,
+      "market_pair": "DYM/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "USDC",
+        "currency_symbol": "USDC",
+        "currency_id": 3408,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 1.0002,
+          "volume_24h_base": 667636830.925115,
+          "volume_24h_quote": 667770358.2913,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 1.2833042655715043
+        },
+        "USD": {
+          "price": 0.99992521,
+          "volume_24h": 667648899.588511,
+          "depth_negative_two": 25753299.39508227,
+          "depth_positive_two": 17246863.84480885,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 30686,
+      "market_pair": "USDC/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ORDI",
+        "currency_symbol": "ORDI",
+        "currency_id": 25028,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 61.125,
+          "volume_24h_base": 10051472.17432802,
+          "volume_24h_quote": 614396236.6558,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 1.1807312221359794
+        },
+        "USD": {
+          "price": 61.1124696,
+          "volume_24h": 614284486.0083264,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1279759,
+      "market_pair": "ORDI/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "SOL",
+        "currency_symbol": "SOL",
+        "currency_id": 5426,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 104.27,
+          "volume_24h_base": 5847721.91946965,
+          "volume_24h_quote": 609741964.5431,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 1.1717867591462747
+        },
+        "USD": {
+          "price": 104.24135384,
+          "volume_24h": 609631060.446909,
+          "depth_negative_two": 4966165.17763271,
+          "depth_positive_two": 10697196.87728073,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 56570,
+      "market_pair": "SOL/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "LINK",
+        "currency_symbol": "LINK",
+        "currency_id": 1975,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 18.44,
+          "volume_24h_base": 30406650.0590564,
+          "volume_24h_quote": 560698627.089,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 1.077367514984023
+        },
+        "USD": {
+          "price": 18.43328055,
+          "volume_24h": 560508723.5575877,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 47212,
+      "market_pair": "LINK/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ETH",
+        "currency_symbol": "ETH",
+        "currency_id": 1027,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USD",
+        "currency_symbol": "USD",
+        "currency_id": 2781,
+        "currency_type": "fiat"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 2431.99,
+          "volume_24h_base": 222601.12911648,
+          "volume_24h_quote": 541363720,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 1.040568435789889
+        },
+        "USD": {
+          "price": 2434.32765932,
+          "volume_24h": 541363720,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 69644,
+      "market_pair": "ETH/USD",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ETH",
+        "currency_symbol": "ETH",
+        "currency_id": 1027,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "FDUSD",
+        "currency_symbol": "FDUSD",
+        "currency_id": 26081,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 2428.99,
+          "volume_24h_base": 190290.57809817,
+          "volume_24h_quote": 462213911.29467,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.8894956331470152
+        },
+        "USD": {
+          "price": 2433.76833283,
+          "volume_24h": 462766934.2273379,
+          "depth_negative_two": 950963.50862422,
+          "depth_positive_two": 1141460.98641776,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1262382,
+      "market_pair": "ETH/FDUSD",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "XRP",
+        "currency_symbol": "XRP",
+        "currency_id": 52,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.5161,
+          "volume_24h_base": 855913377.6200349,
+          "volume_24h_quote": 441736894.1897,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.8487857058625817
+        },
+        "USD": {
+          "price": 0.51591194,
+          "volume_24h": 441587281.91653067,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 47207,
+      "market_pair": "XRP/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "XMR",
+        "currency_symbol": "XMR",
+        "currency_id": 328,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 126.58,
+          "volume_24h_base": 3359865.49952599,
+          "volume_24h_quote": 425291774.93,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.817186846128569
+        },
+        "USD": {
+          "price": 126.53387485,
+          "volume_24h": 425147732.4693307,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 47215,
+      "market_pair": "XMR/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ADA",
+        "currency_symbol": "ADA",
+        "currency_id": 2010,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.5304,
+          "volume_24h_base": 795055098.4977375,
+          "volume_24h_quote": 421697224.2432,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.8102800124859977
+        },
+        "USD": {
+          "price": 0.53020672,
+          "volume_24h": 421554399.22419417,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 47214,
+      "market_pair": "ADA/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "BNB",
+        "currency_symbol": "BNB",
+        "currency_id": 1839,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 318.05,
+          "volume_24h_base": 1246346.95525546,
+          "volume_24h_quote": 396400649.119,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.7616733154789797
+        },
+        "USD": {
+          "price": 317.9341041,
+          "volume_24h": 396266391.8201858,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 47221,
+      "market_pair": "BNB/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "SUI",
+        "currency_symbol": "SUI",
+        "currency_id": 20947,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 1.5391,
+          "volume_24h_base": 236136601.784348,
+          "volume_24h_quote": 363437843.80629,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.6983361608456056
+        },
+        "USD": {
+          "price": 1.53853916,
+          "volume_24h": 363314750.7101895,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 1249226,
+      "market_pair": "SUI/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "TIA",
+        "currency_symbol": "TIA",
+        "currency_id": 22861,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 20.0182,
+          "volume_24h_base": 17974804.0497847,
+          "volume_24h_quote": 359823222.4294,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.6914992114608051
+        },
+        "USD": {
+          "price": 20.01409634,
+          "volume_24h": 359757775.28685015,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1278488,
+      "market_pair": "TIA/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ARB",
+        "currency_symbol": "ARB",
+        "currency_id": 11841,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 1.9079,
+          "volume_24h_base": 186914944.1941821,
+          "volume_24h_quote": 356615022.02808,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.6852262900714755
+        },
+        "USD": {
+          "price": 1.90720477,
+          "volume_24h": 356494239.7597349,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 1238049,
+      "market_pair": "ARB/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "AVAX",
+        "currency_symbol": "AVAX",
+        "currency_id": 5805,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 35.864,
+          "volume_24h_base": 8838352.47111309,
+          "volume_24h_quote": 316978673.024,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.6090660985417272
+        },
+        "USD": {
+          "price": 35.85093133,
+          "volume_24h": 316871315.22699213,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 67921,
+      "market_pair": "AVAX/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "OP",
+        "currency_symbol": "OP",
+        "currency_id": 11840,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 3.4046,
+          "volume_24h_base": 89099703.61583446,
+          "volume_24h_quote": 303348850.93047,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.5828767575140562
+        },
+        "USD": {
+          "price": 3.40335938,
+          "volume_24h": 303246109.43038714,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 975099,
+      "market_pair": "OP/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "MANTA",
+        "currency_symbol": "MANTA",
+        "currency_id": 13631,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 2.7854,
+          "volume_24h_base": 108499035.13796912,
+          "volume_24h_quote": 302213212.4732992,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.5807857444757518
+        },
+        "USD": {
+          "price": 2.784829,
+          "volume_24h": 302158243.8388024,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1297962,
+      "market_pair": "MANTA/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "JUP",
+        "currency_symbol": "JUP",
+        "currency_id": 29210,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.5394,
+          "volume_24h_base": 467857219.1360771,
+          "volume_24h_quote": 252362184.002,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.48498329280053465
+        },
+        "USD": {
+          "price": 0.53928942,
+          "volume_24h": 252316282.61820644,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1301257,
+      "market_pair": "JUP/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "CFX",
+        "currency_symbol": "CFX",
+        "currency_id": 7334,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.2254,
+          "volume_24h_base": 1065280760.3438332,
+          "volume_24h_quote": 240114283.3815,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.46137321602150794
+        },
+        "USD": {
+          "price": 0.22531787,
+          "volume_24h": 240032958.85500097,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 1232205,
+      "market_pair": "CFX/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "MATIC",
+        "currency_symbol": "MATIC",
+        "currency_id": 3890,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.8365,
+          "volume_24h_base": 286600241.4619247,
+          "volume_24h_quote": 239741101.9829,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.46065615787899866
+        },
+        "USD": {
+          "price": 0.83619518,
+          "volume_24h": 239659903.84955058,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 67272,
+      "market_pair": "MATIC/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "BNB",
+        "currency_symbol": "BNB",
+        "currency_id": 1839,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 318.5,
+          "volume_24h_base": 751726.33495793,
+          "volume_24h_quote": 239424837.6841,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.4601206263032978
+        },
+        "USD": {
+          "price": 318.41249829,
+          "volume_24h": 239381289.43455654,
+          "depth_negative_two": 6809240.91903348,
+          "depth_positive_two": 5918006.36864186,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 12096,
+      "market_pair": "BNB/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "BTC",
+        "currency_symbol": "BTC",
+        "currency_id": 1,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDC",
+        "currency_symbol": "USDC",
+        "currency_id": 3408,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 45099.9,
+          "volume_24h_base": 5206.67656469,
+          "volume_24h_quote": 234820592.4,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.4513315577090213
+        },
+        "USD": {
+          "price": 45076.97490681,
+          "volume_24h": 234808709.0007469,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1294495,
+      "market_pair": "BTC/USDC",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "WIF",
+        "currency_symbol": "WIF",
+        "currency_id": 28752,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.2329,
+          "volume_24h_base": 949085577.4903392,
+          "volume_24h_quote": 221042030.9975,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.424793011141621
+        },
+        "USD": {
+          "price": 0.23285226,
+          "volume_24h": 221001826.34029493,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1297852,
+      "market_pair": "WIF/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ENS",
+        "currency_symbol": "ENS",
+        "currency_id": 13855,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 21.234,
+          "volume_24h_base": 9881070.53682773,
+          "volume_24h_quote": 209814651.779,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.40321651637303363
+        },
+        "USD": {
+          "price": 21.22964711,
+          "volume_24h": 209776489.23537284,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 604397,
+      "market_pair": "ENS/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ALT",
+        "currency_symbol": "ALT",
+        "currency_id": 29073,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.33828,
+          "volume_24h_base": 604644782.0851957,
+          "volume_24h_quote": 204539236.88378,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.39307835681917397
+        },
+        "USD": {
+          "price": 0.33821065,
+          "volume_24h": 204502033.86919138,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1299977,
+      "market_pair": "ALT/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "SEI",
+        "currency_symbol": "SEI",
+        "currency_id": 23149,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.6526,
+          "volume_24h_base": 300703107.2333742,
+          "volume_24h_quote": 196238847.7805,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.37712687797635924
+        },
+        "USD": {
+          "price": 0.65246622,
+          "volume_24h": 196203154.4982327,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1264623,
+      "market_pair": "SEI/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "STX",
+        "currency_symbol": "STX",
+        "currency_id": 4847,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 1.8053,
+          "volume_24h_base": 108633524.15692683,
+          "volume_24h_quote": 196116101.1605,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.3768318778531717
+        },
+        "USD": {
+          "price": 1.80464216,
+          "volume_24h": 196049678.4186243,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 1232197,
+      "market_pair": "STX/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "DOGE",
+        "currency_symbol": "DOGE",
+        "currency_id": 74,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.08056,
+          "volume_24h_base": 2370088590.4643745,
+          "volume_24h_quote": 190934336.84781,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.3668752553984684
+        },
+        "USD": {
+          "price": 0.08053064,
+          "volume_24h": 190869669.12243408,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 67926,
+      "market_pair": "DOGE/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "DYM",
+        "currency_symbol": "DYM",
+        "currency_id": 28932,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 7.054,
+          "volume_24h_base": 26913854.01739439,
+          "volume_24h_quote": 189850326.2387,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.36484957808801793
+        },
+        "USD": {
+          "price": 7.05206205,
+          "volume_24h": 189815794.94502586,
+          "depth_negative_two": 386755.85342863,
+          "depth_positive_two": 518688.09126935,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1302415,
+      "market_pair": "DYM/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "SOL",
+        "currency_symbol": "SOL",
+        "currency_id": 5426,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "FDUSD",
+        "currency_symbol": "FDUSD",
+        "currency_id": 26081,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 104.04,
+          "volume_24h_base": 1743801.07207132,
+          "volume_24h_quote": 181425063.5383,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.34913878145449606
+        },
+        "USD": {
+          "price": 104.2446685,
+          "volume_24h": 181642132.34182516,
+          "depth_negative_two": 911822.39380956,
+          "depth_positive_two": 983869.22253754,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1269689,
+      "market_pair": "SOL/FDUSD",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "XRP",
+        "currency_symbol": "XRP",
+        "currency_id": 52,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.5155,
+          "volume_24h_base": 326732089.7806014,
+          "volume_24h_quote": 168430392.2819,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.3236852881884801
+        },
+        "USD": {
+          "price": 0.51535838,
+          "volume_24h": 168399756.99433023,
+          "depth_negative_two": 3008568.38094299,
+          "depth_positive_two": 2424926.26802834,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 20945,
+      "market_pair": "XRP/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "LDO",
+        "currency_symbol": "LDO",
+        "currency_id": 8000,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 2.8837,
+          "volume_24h_base": 58089236.52255783,
+          "volume_24h_quote": 167511931.3601,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.321869725553936
+        },
+        "USD": {
+          "price": 2.88264919,
+          "volume_24h": 167455196.5906854,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 1232208,
+      "market_pair": "LDO/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ETC",
+        "currency_symbol": "ETC",
+        "currency_id": 1321,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 25.463,
+          "volume_24h_base": 6335092.02800141,
+          "volume_24h_quote": 161310448.309,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.3099537406358588
+        },
+        "USD": {
+          "price": 25.4537214,
+          "volume_24h": 161255813.9255584,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 47211,
+      "market_pair": "ETC/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "INJ",
+        "currency_symbol": "INJ",
+        "currency_id": 7226,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 34.017,
+          "volume_24h_base": 4689669.8971867,
+          "volume_24h_quote": 159528500.8926,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.3065297760190624
+        },
+        "USD": {
+          "price": 34.00460437,
+          "volume_24h": 159474470.03856048,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 986852,
+      "market_pair": "INJ/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "NEAR",
+        "currency_symbol": "NEAR",
+        "currency_id": 6535,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 2.978,
+          "volume_24h_base": 49315845.59301545,
+          "volume_24h_quote": 146862588.176,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.28219256124945696
+        },
+        "USD": {
+          "price": 2.97691483,
+          "volume_24h": 146812847.151536,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 67691,
+      "market_pair": "NEAR/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "XAI",
+        "currency_symbol": "XAI",
+        "currency_id": 28933,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.8527,
+          "volume_24h_base": 163935214.40494898,
+          "volume_24h_quote": 139787557.3231,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.26864020895683505
+        },
+        "USD": {
+          "price": 0.8525252,
+          "volume_24h": 139762131.79294926,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1295505,
+      "market_pair": "XAI/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "API3",
+        "currency_symbol": "API3",
+        "currency_id": 7737,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 3.054,
+          "volume_24h_base": 45448902.02554028,
+          "volume_24h_quote": 138800946.786,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.2667023315049528
+        },
+        "USD": {
+          "price": 3.05288714,
+          "volume_24h": 138753936.16624,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 841238,
+      "market_pair": "API3/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ARB",
+        "currency_symbol": "ARB",
+        "currency_id": 11841,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 1.9044,
+          "volume_24h_base": 71584225.90002625,
+          "volume_24h_quote": 136324999.80401,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.26198595307550926
+        },
+        "USD": {
+          "price": 1.9038768,
+          "volume_24h": 136300204.06782866,
+          "depth_negative_two": 1640383.33754793,
+          "depth_positive_two": 1864530.44738436,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1237772,
+      "market_pair": "ARB/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "PENDLE",
+        "currency_symbol": "PENDLE",
+        "currency_id": 9481,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 2.9835,
+          "volume_24h_base": 44906965.14885202,
+          "volume_24h_quote": 133979930.5216,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.2574792579582266
+        },
+        "USD": {
+          "price": 2.98288839,
+          "volume_24h": 133955561.3228794,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1262895,
+      "market_pair": "PENDLE/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "SOL",
+        "currency_symbol": "SOL",
+        "currency_id": 5426,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USD",
+        "currency_symbol": "USD",
+        "currency_id": 2781,
+        "currency_type": "fiat"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 104.18,
+          "volume_24h_base": 1252621.04050682,
+          "volume_24h_quote": 130498060,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.25083351017281885
+        },
+        "USD": {
+          "price": 104.28013912,
+          "volume_24h": 130498060,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 186933,
+      "market_pair": "SOL/USD",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "CTSI",
+        "currency_symbol": "CTSI",
+        "currency_id": 5444,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.3028,
+          "volume_24h_base": 430858775.6677675,
+          "volume_24h_quote": 130464037.2722,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.25072250281294833
+        },
+        "USD": {
+          "price": 0.30273793,
+          "volume_24h": 130440307.56852125,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 365249,
+      "market_pair": "CTSI/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "FIL",
+        "currency_symbol": "FIL",
+        "currency_id": 2280,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 5.237,
+          "volume_24h_base": 24253536.54000382,
+          "volume_24h_quote": 127015770.86,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.24405742907855765
+        },
+        "USD": {
+          "price": 5.23509166,
+          "volume_24h": 126972751.7722655,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 64995,
+      "market_pair": "FIL/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "DOT",
+        "currency_symbol": "DOT",
+        "currency_id": 6636,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 6.972,
+          "volume_24h_base": 17797194.36603557,
+          "volume_24h_quote": 124082039.12,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.23842034148524016
+        },
+        "USD": {
+          "price": 6.96945944,
+          "volume_24h": 124040013.66055478,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 59000,
+      "market_pair": "DOT/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "LINK",
+        "currency_symbol": "LINK",
+        "currency_id": 1975,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 18.401,
+          "volume_24h_base": 6530132.14949568,
+          "volume_24h_quote": 120160961.68287,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.23092231149249887
+        },
+        "USD": {
+          "price": 18.39594468,
+          "volume_24h": 120139105.97401638,
+          "depth_negative_two": 3060529.86567911,
+          "depth_positive_two": 1280650.52858966,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 31764,
+      "market_pair": "LINK/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "LTC",
+        "currency_symbol": "LTC",
+        "currency_id": 2,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 69.02,
+          "volume_24h_base": 1728325.7384816,
+          "volume_24h_quote": 119289042.47,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.22921072576539003
+        },
+        "USD": {
+          "price": 68.99484944,
+          "volume_24h": 119248640.35497887,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 47209,
+      "market_pair": "LTC/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "KAS",
+        "currency_symbol": "KAS",
+        "currency_id": 20396,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.12935,
+          "volume_24h_base": 880098641.8265172,
+          "volume_24h_quote": 113840759.32026,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.21877630568300713
+        },
+        "USD": {
+          "price": 0.12932348,
+          "volume_24h": 113820053.17363358,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1281626,
+      "market_pair": "KAS/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ADA",
+        "currency_symbol": "ADA",
+        "currency_id": 2010,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.5297,
+          "volume_24h_base": 214809357.20658863,
+          "volume_24h_quote": 113784516.51233,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.21866821967046088
+        },
+        "USD": {
+          "price": 0.52955448,
+          "volume_24h": 113763820.59553544,
+          "depth_negative_two": 1181463.46282052,
+          "depth_positive_two": 1597889.71819782,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 19780,
+      "market_pair": "ADA/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "PYTH",
+        "currency_symbol": "PYTH",
+        "currency_id": 28177,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.4815,
+          "volume_24h_base": 232803903.02305296,
+          "volume_24h_quote": 112095079.3056,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.21542150177277
+        },
+        "USD": {
+          "price": 0.48140129,
+          "volume_24h": 112074690.67535841,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1282895,
+      "market_pair": "PYTH/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "BLUR",
+        "currency_symbol": "BLUR",
+        "currency_id": 23121,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.6126,
+          "volume_24h_base": 180067924.90548483,
+          "volume_24h_quote": 110309610.7971,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.21195698637668003
+        },
+        "USD": {
+          "price": 0.61237677,
+          "volume_24h": 110272249.93401419,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 1245221,
+      "market_pair": "BLUR/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "1000SATS",
+        "currency_symbol": "1000SATS",
+        "currency_id": 28683,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.0004503,
+          "volume_24h_base": 243863560018.34778,
+          "volume_24h_quote": 109811761.076262,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.211033478274895
+        },
+        "USD": {
+          "price": 0.00045021,
+          "volume_24h": 109791787.75177148,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1287907,
+      "market_pair": "1000SATS/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ATOM",
+        "currency_symbol": "ATOM",
+        "currency_id": 3794,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 9.591,
+          "volume_24h_base": 11184844.96090084,
+          "volume_24h_quote": 107273848.02,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.20612384885639487
+        },
+        "USD": {
+          "price": 9.58750509,
+          "volume_24h": 107237515.34218885,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 47222,
+      "market_pair": "ATOM/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "AVAX",
+        "currency_symbol": "AVAX",
+        "currency_id": 5805,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 35.77,
+          "volume_24h_base": 2889560.80613643,
+          "volume_24h_quote": 103359590.0355,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.19863385838162204
+        },
+        "USD": {
+          "price": 35.76017288,
+          "volume_24h": 103340790.27661486,
+          "depth_negative_two": 1660331.7688674,
+          "depth_positive_two": 2496927.77931476,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 62697,
+      "market_pair": "AVAX/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "1000LUNC",
+        "currency_symbol": "LUNC",
+        "currency_id": 4172,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.10912,
+          "volume_24h_base": 942361382.0250183,
+          "volume_24h_quote": 102830474.00657,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.19761701651603583
+        },
+        "USD": {
+          "price": 0.10909763,
+          "volume_24h": 102811770.48697686,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 72942,
+      "market_pair": "LUNC/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "DYDX",
+        "currency_symbol": "ETHDYDX",
+        "currency_id": 11156,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 2.904,
+          "volume_24h_base": 35263931.62327824,
+          "volume_24h_quote": 102406457.434,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.19680215214013802
+        },
+        "USD": {
+          "price": 2.90340469,
+          "volume_24h": 102387831.03748102,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 208063,
+      "market_pair": "ETHDYDX/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "JUP",
+        "currency_symbol": "JUP",
+        "currency_id": 29210,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.5372,
+          "volume_24h_base": 190609105.40312734,
+          "volume_24h_quote": 102395211.42256,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.1967805398384351
+        },
+        "USD": {
+          "price": 0.53705241,
+          "volume_24h": 102376587.07154354,
+          "depth_negative_two": 638454.38878646,
+          "depth_positive_two": 407404.58899098,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1301004,
+      "market_pair": "JUP/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ETH",
+        "currency_symbol": "ETH",
+        "currency_id": 1027,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "BTC",
+        "currency_symbol": "BTC",
+        "currency_id": 1,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.0541,
+          "volume_24h_base": 40127.43645305,
+          "volume_24h_quote": 2170.89431211,
+          "last_updated": "2024-02-08T15:00:02.000Z",
+          "volume_percentage": 0.18796322249496736
+        },
+        "USD": {
+          "price": 2439.24252018,
+          "volume_24h": 97789310.00902455,
+          "depth_negative_two": 4787503.92311488,
+          "depth_positive_two": 3077110.37847266,
+          "last_updated": "2024-02-08T15:00:02.000Z"
+        }
+      },
+      "market_id": 9346,
+      "market_pair": "ETH/BTC",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "TRX",
+        "currency_symbol": "TRX",
+        "currency_id": 1958,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.12256,
+          "volume_24h_base": 793795437.5456103,
+          "volume_24h_quote": 97287568.82559,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.18693547870561442
+        },
+        "USD": {
+          "price": 0.12251534,
+          "volume_24h": 97254618.40982313,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 47210,
+      "market_pair": "TRX/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ZETA",
+        "currency_symbol": "ZETA",
+        "currency_id": 21259,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 1.2181,
+          "volume_24h_base": 77353247.01756833,
+          "volume_24h_quote": 94223990.1921,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.18107729256221597
+        },
+        "USD": {
+          "price": 1.21785029,
+          "volume_24h": 94206852.07945657,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1301754,
+      "market_pair": "ZETA/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "MANTA",
+        "currency_symbol": "MANTA",
+        "currency_id": 13631,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 2.7738,
+          "volume_24h_base": 33476304.75976278,
+          "volume_24h_quote": 92856574.14263,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.17844942681868997
+        },
+        "USD": {
+          "price": 2.77303795,
+          "volume_24h": 92839684.7450987,
+          "depth_negative_two": 586848.18606009,
+          "depth_positive_two": 634760.17455238,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1296816,
+      "market_pair": "MANTA/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ORDI",
+        "currency_symbol": "ORDI",
+        "currency_id": 25028,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 60.952,
+          "volume_24h_base": 1480258.2148174,
+          "volume_24h_quote": 90224698.70955,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.17339155486048144
+        },
+        "USD": {
+          "price": 60.93525462,
+          "volume_24h": 90208288.01577072,
+          "depth_negative_two": 1685523.49070207,
+          "depth_positive_two": 2069281.81854451,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1279708,
+      "market_pair": "ORDI/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "TIA",
+        "currency_symbol": "TIA",
+        "currency_id": 22861,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 19.9726,
+          "volume_24h_base": 4404791.47112144,
+          "volume_24h_quote": 87975138.13612,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.16906840597598896
+        },
+        "USD": {
+          "price": 19.96711291,
+          "volume_24h": 87959136.60801527,
+          "depth_negative_two": 1202698.26834424,
+          "depth_positive_two": 2131660.10568125,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1278272,
+      "market_pair": "TIA/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ICP",
+        "currency_symbol": "ICP",
+        "currency_id": 8916,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 12.377,
+          "volume_24h_base": 7048934.59772158,
+          "volume_24h_quote": 87244663.516,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.16766459823841523
+        },
+        "USD": {
+          "price": 12.37446276,
+          "volume_24h": 87228794.85168397,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 81595,
+      "market_pair": "ICP/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "TRB",
+        "currency_symbol": "TRB",
+        "currency_id": 4944,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 115.033,
+          "volume_24h_base": 733574.73298097,
+          "volume_24h_quote": 84385302.259,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.1621441162928399
+        },
+        "USD": {
+          "price": 114.99108252,
+          "volume_24h": 84356721.72371054,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 67950,
+      "market_pair": "TRB/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "1000PEPE",
+        "currency_symbol": "PEPE",
+        "currency_id": 24478,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.0009779,
+          "volume_24h_base": 85204533595.01268,
+          "volume_24h_quote": 83321513.4025629,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.16010007426855755
+        },
+        "USD": {
+          "price": 0.00097754,
+          "volume_24h": 83293293.16289528,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 1246310,
+      "market_pair": "PEPE/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "TRY",
+        "currency_symbol": "TRY",
+        "currency_id": 2810,
+        "currency_type": "fiat"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 30.68,
+          "volume_24h_base": 83010961.27900913,
+          "volume_24h_quote": 2546776292.04,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.15995083041888528
+        },
+        "USD": {
+          "price": 1.00273251,
+          "volume_24h": 83215647.90395144,
+          "depth_negative_two": 4010192.67147507,
+          "depth_positive_two": 9474097.76717715,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 45700,
+      "market_pair": "USDT/TRY",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": [
+        "price",
+        "volume"
+      ],
+      "market_pair_base": {
+        "exchange_symbol": "BTC",
+        "currency_symbol": "BTC",
+        "currency_id": 1,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USD",
+        "currency_symbol": "USD",
+        "currency_id": 2781,
+        "currency_type": "fiat"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 45642.6,
+          "volume_24h_base": 1794.35362464,
+          "volume_24h_quote": 81209900,
+          "last_updated": "2024-02-08T14:57:51.624Z",
+          "volume_percentage": null
+        },
+        "USD": {
+          "price": 45045.63371119539,
+          "volume_24h": 81209900,
+          "last_updated": "2024-02-08T14:57:51.624Z"
+        }
+      },
+      "market_id": 69650,
+      "market_pair": "BTC/USD",
+      "category": "futures",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ALT",
+        "currency_symbol": "ALT",
+        "currency_id": 29073,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.33781,
+          "volume_24h_base": 238318846.25540984,
+          "volume_24h_quote": 80506489.45354,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.15471534493725853
+        },
+        "USD": {
+          "price": 0.33771719,
+          "volume_24h": 80491846.37504195,
+          "depth_negative_two": 788163.94455787,
+          "depth_positive_two": 281994.54551527,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1299817,
+      "market_pair": "ALT/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ID",
+        "currency_symbol": "ID",
+        "currency_id": 21846,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.53754,
+          "volume_24h_base": 148044426.40936488,
+          "volume_24h_quote": 79579800.97209,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.15293445834004005
+        },
+        "USD": {
+          "price": 0.53739232,
+          "volume_24h": 79565326.4461182,
+          "depth_negative_two": 405075.86032181,
+          "depth_positive_two": 147413.46046443,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1237499,
+      "market_pair": "ID/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "BCH",
+        "currency_symbol": "BCH",
+        "currency_id": 1831,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 243.31,
+          "volume_24h_base": 324353.88126259,
+          "volume_24h_quote": 78918542.85,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.15163988333249243
+        },
+        "USD": {
+          "price": 243.221339,
+          "volume_24h": 78891813.8564604,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 47206,
+      "market_pair": "BCH/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ETH",
+        "currency_symbol": "ETH",
+        "currency_id": 1027,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDC",
+        "currency_symbol": "USDC",
+        "currency_id": 3408,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 2436.4,
+          "volume_24h_base": 32285.63967329,
+          "volume_24h_quote": 78660732.5,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.15118806475576219
+        },
+        "USD": {
+          "price": 2435.1615339,
+          "volume_24h": 78656751.7720737,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1294494,
+      "market_pair": "ETH/USDC",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "GALA",
+        "currency_symbol": "GALA",
+        "currency_id": 7080,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.02297,
+          "volume_24h_base": 3421081960.842403,
+          "volume_24h_quote": 78582252.64055,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.1510173950665897
+        },
+        "USD": {
+          "price": 0.02296529,
+          "volume_24h": 78567959.5555853,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 234380,
+      "market_pair": "GALA/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "ONDO",
+        "currency_symbol": "ONDO",
+        "currency_id": 21159,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.2364,
+          "volume_24h_base": 329699346.2037225,
+          "volume_24h_quote": 77940925.44256,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.14978490860086288
+        },
+        "USD": {
+          "price": 0.23635154,
+          "volume_24h": 77926749.00663275,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1298403,
+      "market_pair": "ONDO/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "BNB",
+        "currency_symbol": "BNB",
+        "currency_id": 1839,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USD",
+        "currency_symbol": "USD",
+        "currency_id": 2781,
+        "currency_type": "fiat"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 317.81,
+          "volume_24h_base": 241002.98920739,
+          "volume_24h_quote": 76593160,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.14722158458162785
+        },
+        "USD": {
+          "price": 318.11548296,
+          "volume_24h": 76593160,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 69638,
+      "market_pair": "BNB/USD",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "AI",
+        "currency_symbol": "AI",
+        "currency_id": 28846,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 1.13485,
+          "volume_24h_base": 65562383.92790237,
+          "volume_24h_quote": 74403471.40058,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.14298671846712865
+        },
+        "USD": {
+          "price": 1.13461736,
+          "volume_24h": 74389938.38132104,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1295215,
+      "market_pair": "AI/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "1000SHIB",
+        "currency_symbol": "SHIB",
+        "currency_id": 5994,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.009219,
+          "volume_24h_base": 7996264420.707018,
+          "volume_24h_quote": 73717561.694498,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.14164633622488998
+        },
+        "USD": {
+          "price": 0.00921564,
+          "volume_24h": 73692594.22602823,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 1232220,
+      "market_pair": "SHIB/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "APT",
+        "currency_symbol": "APT",
+        "currency_id": 21794,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 8.866,
+          "volume_24h_base": 8200138.53039702,
+          "volume_24h_quote": 72702428.2105,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.13971769648277943
+        },
+        "USD": {
+          "price": 8.8641825,
+          "volume_24h": 72689204.58877073,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1172071,
+      "market_pair": "APT/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "SUI",
+        "currency_symbol": "SUI",
+        "currency_id": 20947,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 1.5362,
+          "volume_24h_base": 47272735.88219633,
+          "volume_24h_quote": 72620376.86223,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.13956001226705556
+        },
+        "USD": {
+          "price": 1.53577796,
+          "volume_24h": 72607168.16456886,
+          "depth_negative_two": 1492381.5523978,
+          "depth_positive_two": 1166843.91628249,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1245832,
+      "market_pair": "SUI/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "SEI",
+        "currency_symbol": "SEI",
+        "currency_id": 23149,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.6508,
+          "volume_24h_base": 110983777.42311002,
+          "volume_24h_quote": 72228242.34696,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.13880641802634766
+        },
+        "USD": {
+          "price": 0.65062121,
+          "volume_24h": 72215104.97344339,
+          "depth_negative_two": 1515112.71108613,
+          "depth_positive_two": 1292730.70003518,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1264202,
+      "market_pair": "SEI/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "OP",
+        "currency_symbol": "OP",
+        "currency_id": 11840,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 3.405,
+          "volume_24h_base": 20725269.22304552,
+          "volume_24h_quote": 70569541.70447,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.13561876888411806
+        },
+        "USD": {
+          "price": 3.40406454,
+          "volume_24h": 70556706.02692693,
+          "depth_negative_two": 1336714.69445335,
+          "depth_positive_two": 1285150.28452957,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 971236,
+      "market_pair": "OP/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "OM",
+        "currency_symbol": "OM",
+        "currency_id": 6536,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.22595,
+          "volume_24h_base": 308038129.45297635,
+          "volume_24h_quote": 69601215.3499,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.1337578636704384
+        },
+        "USD": {
+          "price": 0.22588792,
+          "volume_24h": 69588555.79826824,
+          "depth_negative_two": 73392.72217983,
+          "depth_positive_two": 195952.41894074,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 74931,
+      "market_pair": "OM/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "RNDR",
+        "currency_symbol": "RNDR",
+        "currency_id": 5690,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 4.5181,
+          "volume_24h_base": 15027424.3972245,
+          "volume_24h_quote": 67895406.1691,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.13045921906925464
+        },
+        "USD": {
+          "price": 4.51645363,
+          "volume_24h": 67872410.61181618,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 1232201,
+      "market_pair": "RNDR/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "BNB",
+        "currency_symbol": "BNB",
+        "currency_id": 1839,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "FDUSD",
+        "currency_symbol": "FDUSD",
+        "currency_id": 26081,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 317.8,
+          "volume_24h_base": 210585.3547747,
+          "volume_24h_quote": 66924025.7474,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.12879021422827774
+        },
+        "USD": {
+          "price": 318.42517926,
+          "volume_24h": 67004098.02579834,
+          "depth_negative_two": 520710.41266234,
+          "depth_positive_two": 699984.24996818,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 1261059,
+      "market_pair": "BNB/FDUSD",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": [
+        "price",
+        "volume"
+      ],
+      "market_pair_base": {
+        "exchange_symbol": "BTC",
+        "currency_symbol": "BTC",
+        "currency_id": 1,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 45626.5,
+          "volume_24h_base": 1392.367,
+          "volume_24h_quote": 62858374.2,
+          "last_updated": "2024-02-08T14:57:17.385Z",
+          "volume_percentage": null
+        },
+        "USD": {
+          "price": 45045.63371119539,
+          "volume_24h": 62858374.2,
+          "last_updated": "2024-02-08T14:57:17.385Z"
+        }
+      },
+      "market_id": 73897,
+      "market_pair": "BTC/USDT",
+      "category": "futures",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "UMA",
+        "currency_symbol": "UMA",
+        "currency_id": 5617,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 4.124,
+          "volume_24h_base": 14833920.51309408,
+          "volume_24h_quote": 61175088.196,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.11754630663326261
+        },
+        "USD": {
+          "price": 4.12249723,
+          "volume_24h": 61154368.74936395,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 1249222,
+      "market_pair": "UMA/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "EOS",
+        "currency_symbol": "EOS",
+        "currency_id": 1765,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.724,
+          "volume_24h_base": 81591375.26519337,
+          "volume_24h_quote": 59072155.692,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.1135055776987614
+        },
+        "USD": {
+          "price": 0.72373618,
+          "volume_24h": 59052148.48949928,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 47208,
+      "market_pair": "EOS/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "CHR",
+        "currency_symbol": "CHR",
+        "currency_id": 3978,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.3212,
+          "volume_24h_base": 180513484.29140723,
+          "volume_24h_quote": 57980931.1544,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.11142629400718439
+        },
+        "USD": {
+          "price": 0.32113416,
+          "volume_24h": 57970385.18062762,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 76262,
+      "market_pair": "CHR/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "MATIC",
+        "currency_symbol": "MATIC",
+        "currency_id": 3890,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.8349,
+          "volume_24h_base": 68858011.71698406,
+          "volume_24h_quote": 57489553.98251,
+          "last_updated": "2024-02-08T14:58:58.000Z",
+          "volume_percentage": 0.11048197772710203
+        },
+        "USD": {
+          "price": 0.83467063,
+          "volume_24h": 57479097.38382463,
+          "depth_negative_two": 1212394.94516276,
+          "depth_positive_two": 1442770.87223595,
+          "last_updated": "2024-02-08T14:58:58.000Z"
+        }
+      },
+      "market_id": 36332,
+      "market_pair": "MATIC/USDT",
+      "category": "spot",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "FTM",
+        "currency_symbol": "FTM",
+        "currency_id": 3513,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.3741,
+          "volume_24h_base": 152603843.41780272,
+          "volume_24h_quote": 57089097.8226,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.10969518468974507
+        },
+        "USD": {
+          "price": 0.37396368,
+          "volume_24h": 57069762.26378485,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 67929,
+      "market_pair": "FTM/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "AAVE",
+        "currency_symbol": "AAVE",
+        "currency_id": 7278,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 85.84,
+          "volume_24h_base": 661149.5305685,
+          "volume_24h_quote": 56753075.704,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.1090495271164864
+        },
+        "USD": {
+          "price": 85.80872031,
+          "volume_24h": 56733853.95282388,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 67919,
+      "market_pair": "AAVE/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "CRV",
+        "currency_symbol": "CRV",
+        "currency_id": 6538,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 0.484,
+          "volume_24h_base": 116084739.07438017,
+          "volume_24h_quote": 56185013.712,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.10795801109146008
+        },
+        "USD": {
+          "price": 0.48382363,
+          "volume_24h": 56165984.3582601,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 67925,
+      "market_pair": "CRV/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    },
+    {
+      "outlier_detected": 0,
+      "exclusions": null,
+      "market_pair_base": {
+        "exchange_symbol": "APE",
+        "currency_symbol": "APE",
+        "currency_id": 18876,
+        "currency_type": "cryptocurrency"
+      },
+      "market_pair_quote": {
+        "exchange_symbol": "USDT",
+        "currency_symbol": "USDT",
+        "currency_id": 825,
+        "currency_type": "cryptocurrency"
+      },
+      "quote": {
+        "exchange_reported": {
+          "price": 1.3952,
+          "volume_24h_base": 40103799.01103784,
+          "volume_24h_quote": 55952820.3802,
+          "last_updated": "2024-02-08T14:59:58.000Z",
+          "volume_percentage": 0.10751185777345394
+        },
+        "USD": {
+          "price": 1.3946916,
+          "volume_24h": 55933869.66823225,
+          "last_updated": "2024-02-08T14:59:58.000Z"
+        }
+      },
+      "market_id": 940353,
+      "market_pair": "APE/USDT",
+      "category": "derivatives",
+      "fee_type": "percentage"
+    }
+  ]
+}
