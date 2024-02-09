@@ -90,7 +90,10 @@ def main() -> None:
 
     chart_handler = CommandHandler('chart', chart_handle)
     application.add_handler(chart_handler)
-    
+
+    cx_handler = CommandHandler('cx', cx_handle)
+    application.add_handler(cx_handler)
+
     heatmap_handler = CommandHandler('heatmap', heatmap_handle)
     application.add_handler(heatmap_handler)
 
