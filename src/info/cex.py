@@ -42,17 +42,36 @@ def cex_exact_info(symbol, market_pair):
             return i
     return None
 
-def display_trendline(long_data, file_path):
+def display_trendline(long_data, file_path, style):
     mc = mpf.make_marketcolors(up='#089981',down='#F23645',
                            edge={'up':'#089981','down':'#F23645'},
                            wick={'up':'#089981','down':'#F23645'},
                            volume = '#15547D',
                            ohlc='black')
     s  = mpf.make_mpf_style(marketcolors=mc, base_mpf_style='nightclouds')
-    fig, axes = mpf.plot(long_data, type='candle', style=s, title='Trend Analysis', ylabel='Price', volume=True,
+    if style in ["line", 'lineWithMarkers', 'area', 'hlcarea', 'baseline']:
+        fig, axes = mpf.plot(long_data, type='line', style=s, ylabel='Price', volume=True,
                          figsize=(20, 10),
                          returnfig=True)
-    fig.savefig(file_path)
+    elif style in ["candle", 'hollowCandle', 'hilo', 'ha']:
+        fig, axes = mpf.plot(long_data, type='candle', style=s, ylabel='Price', volume=True,
+                            figsize=(20, 10),
+                            returnfig=True)
+    elif style == "stepline":
+        fig, axes = mpf.plot(long_data, type='renko', style=s, ylabel='Price', volume=True,
+                            figsize=(20, 10),
+                            returnfig=True)
+    else:
+        mc = mpf.make_marketcolors(up='#089981',down='#F23645',
+                           edge={'up':'#089981','down':'#F23645'},
+                           wick={'up':'#089981','down':'#F23645'},
+                           volume = '#15547D',
+                           ohlc='i')
+        s  = mpf.make_mpf_style(marketcolors=mc, base_mpf_style='nightclouds')
+        fig, axes = mpf.plot(long_data, type='ohlc', style=s, ylabel='Price', volume=True,
+                            figsize=(20, 10),
+                            returnfig=True)
+    fig.savefig(file_path, bbox_inches='tight')
 
 def make_finance_chart(raw_data):
     columns = ["date", "open", "high", "low", "close", "volume"]
@@ -77,7 +96,7 @@ def make_finance_chart(raw_data):
     # print(df.head())
     return df
 
-def cex_historical_info(symbol, time_start, time_end, interval, period, file_path):
+def cex_historical_info(symbol, time_start, time_end, interval, period, file_path, style):
     parameters = {
         "symbol" : symbol,
         "time_start" : time_start,
@@ -90,7 +109,7 @@ def cex_historical_info(symbol, time_start, time_end, interval, period, file_pat
     data = make_finance_chart(raw_data=test.data[symbol][0]["quotes"])
 
     try:
-        display_trendline(long_data=data, file_path=file_path)
+        display_trendline(long_data=data, file_path=file_path, style=style)
         return True
     except:
         return False

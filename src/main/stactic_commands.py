@@ -48,6 +48,7 @@ async def bot_commands(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/chart - Displays either the $AIRM chart or the chart of the symbol that is set by a group admin.\n"
         "/heatmap - This command gives you a birds-eye view of crypto. Segment by type of coin, market cap, recent performance and more.\n"
         "/settings - Displays all your personal settings and the ability to change them (can be used via DM)\n"
+        "/stats - Displays the bot stats"
     )
     await message.reply_text(commands_text)
 

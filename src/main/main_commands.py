@@ -686,7 +686,7 @@ async def chart_cx_final_response(message: Update.message, context: ContextTypes
         user_interval = "daily"
         period = "daily"
     
-    picture = cex_historical_info(symbol=symbol, time_start=start.strftime("%Y-%m-%dT%H:%M:%S"), time_end=now.strftime("%Y-%m-%dT%H:%M:%S"), interval=user_interval, period=period, file_path=file_path)
+    picture = cex_historical_info(symbol=symbol, time_start=start.strftime("%Y-%m-%dT%H:%M:%S"), time_end=now.strftime("%Y-%m-%dT%H:%M:%S"), interval=user_interval, period=period, file_path=file_path, style=style)
     if picture == False:
         await message.edit_text(f'❌ This symbol {symbol} you entered is either not available on supported exchanges or could not be matched to a project by our search algorithm. Please contact me directly @fieryfox617',parse_mode=ParseMode.MARKDOWN)
         await asyncio.sleep(5)
@@ -948,7 +948,7 @@ async def cx_final_response(message: Update.message, context: ContextTypes.DEFAU
         period = "daily"
     
     detailed_info = get_detailed_info(symbol=symbol)
-    picture = cex_historical_info(symbol=symbol, time_start=start.strftime("%Y-%m-%dT%H:%M:%S"), time_end=now.strftime("%Y-%m-%dT%H:%M:%S"), interval=user_interval, period=period, file_path=file_path)
+    picture = cex_historical_info(symbol=symbol, time_start=start.strftime("%Y-%m-%dT%H:%M:%S"), time_end=now.strftime("%Y-%m-%dT%H:%M:%S"), interval=user_interval, period=period, file_path=file_path, style=style)
     if picture == False or detailed_info == None:
         await message.edit_text(f'❌ This symbol {symbol} you entered is either not available on supported exchanges or could not be matched to a project by our search algorithm. Please contact me directly @fieryfox617',parse_mode=ParseMode.MARKDOWN)
         await asyncio.sleep(5)
