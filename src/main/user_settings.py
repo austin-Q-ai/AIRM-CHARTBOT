@@ -5,6 +5,7 @@ from datetime import datetime
 from telegram.constants import ParseMode
 from ..model.crud import *
 
+# Chains that users can select
 default_chain = {
     'ethereum':'Ethereum',
     'solana':'Solana',
@@ -87,7 +88,8 @@ default_chain = {
     'syscoin':'Syscoin',
     'ethereumfair':'EthereumFair'
 }
-    
+
+# Indicators that are possible
 default_indicators = {
   'OBV': 'On Balance Volume', 
   'ADI': 'Accumulation/Distribution',
@@ -207,7 +209,7 @@ async def style_dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     user = get_user_by_id(chat_id)
     if not user:
         user = create_user(chat_id)
-    style = ["bar", "candle", "line", "area", "heikinAshi", "hollowCandle", "renko", "lineBreak"]
+    # possible styles of charts
     styles = {
         "bar":"Bars",
         "candle":"Candles",
@@ -426,6 +428,6 @@ async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                      f'💬 Groups using AI Realm Bot: *719*\n'
                      f'👤 Unique users: *{user_count}*\n'
                      f'🪄 Charts generated: *{chart_count}*\n'
-                     f'👁️ User impressions: *{imporession_count}*')
+                     f'👁️ User impressions: *{imporession_count + chart_count}*')
     # Send the stats message
     await update.message.reply_text(stats_message, parse_mode=ParseMode.MARKDOWN)

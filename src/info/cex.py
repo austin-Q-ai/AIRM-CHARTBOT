@@ -2,8 +2,11 @@ import coinmarketcapapi
 import os, json, datetime
 import pandas as pd
 import mplfinance as mpf
+from dotenv import load_dotenv
 
-api_key = "585f8137-651b-4825-b1c9-8ea8f7b84c14"
+load_dotenv(dotenv_path='.env')
+
+api_key = os.getenv('COINMAKRET_KEY')
 cmc_client = coinmarketcapapi.CoinMarketCapAPI(api_key)
 
 def cex_info_symbol_market_pair(symbol):

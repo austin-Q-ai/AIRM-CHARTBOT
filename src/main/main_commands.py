@@ -145,6 +145,7 @@ def format_number(num):
     rounded_number = round(num, 3)
     return rounded_number
 
+# /dx handling functions
 async def dx_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Define the response message and buttons 
     message = update.message or update.callback_query.message
@@ -290,7 +291,7 @@ async def dx_callback_handle(update: Update, context: ContextTypes.DEFAULT_TYPE)
         else:
             await dx_select_platform(message=sent_message, context=context, chain_info=info, user_input=pair_address, interval=interval, indicators=user.indicators, style=user.style)
 
-
+# /i handling functions
 async def i_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Define the response message and buttons 
     message = update.message or update.callback_query.message
@@ -559,7 +560,7 @@ async def i_callback_handle(update: Update, context: ContextTypes.DEFAULT_TYPE)-
     else:
         pass
 
-
+# /chart handling functions
 async def chart_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Define the response message and buttons 
     message = update.message or update.callback_query.message
@@ -644,7 +645,7 @@ async def chart_select_platform(message: Update.message, context: ContextTypes.D
             for y in range(0,3):
                 try:
                     title = f'{platforms[keys[i+y]].dex_id}'
-                    call_back = f'chart_{platforms[keys[i+y]].chain_id}_{platforms[keys[i+y]].pair_address}_{interval}'
+                    call_back = f'chart_DX_{platforms[keys[i+y]].chain_id}_{platforms[keys[i+y]].pair_address}_{interval}'
                     rows.append(InlineKeyboardButton(title, callback_data=call_back))
                 except:
                     rows.append(InlineKeyboardButton("✖ Close", callback_data='chart_close'))
@@ -795,7 +796,7 @@ async def chart_callback_handle(update: Update, context: ContextTypes.DEFAULT_TY
             
             if info:
                 if len(info) == 1:
-                    await chart_cx_final_response(message=sent_message, context=context, chain_info=info[0], interval=user.interval, style=user.style)
+                    await chart_cx_final_response(message=sent_message, context=context, chain_info=info[0], interval=user.interval, indicators=user.indicators, style=user.style)
                 else:
                     # await sent_message.edit_text(f'⚠ There isn\'t info of {user_input} on {user.chain}. So researching on {chain_name}.')
                     await chart_cx_select_platform(message=sent_message, context=context, chain_info=info, user_input=user_input, interval=user.interval, indicators=user.indicators, style=user.style)
@@ -821,7 +822,7 @@ async def chart_callback_handle(update: Update, context: ContextTypes.DEFAULT_TY
                 await sent_message.delete()
                 return None
 
-
+# /heatmap handling functions
 async def heatmap_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
     # Define the response message and buttons
@@ -881,7 +882,7 @@ async def heatmap_callback_handle(update: Update, context: ContextTypes.DEFAULT_
                 )
                 log_function("heatmap", candidate_datasource[datasource], candidate_blocksize[blocksize])
 
-
+# /cx handling functions
 async def cx_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Define the response message and buttons 
     message = update.message or update.callback_query.message
