@@ -41,3 +41,7 @@ async def callback_query_handler(update: Update, context: ContextTypes.DEFAULT_T
     elif query.data.startswith('chart_'):
         # Call settings function directly when "Settings" button is pressed
         await chart_callback_handle(update, context)
+    
+    elif query.data.startswith('cx_'):
+        # Call settings function directly when "Settings" button is pressed
+        await cx_callback_handle(update, context)

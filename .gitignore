@@ -4,3 +4,4 @@ __pycache__
 node_modules
 chart_log.txt
 log.txt
+*.png

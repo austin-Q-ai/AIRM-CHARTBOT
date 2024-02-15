@@ -51,15 +51,6 @@ def update_timezone(id:int, timezone:str):
         return False
     return user
 
-# # Define the scale updating function
-# def update_scale(id:int, scale:str):
-#     user = db.query(User).filter(User.id == id).update({"scale" : scale})
-#     try:
-#         db.commit()
-#     except:
-#         return False
-#     return user
-
 # Define the default chain updating function
 def update_chain(id:int, chain:str):
     user = db.query(User).filter(User.id == id).update({"chain" : chain})
@@ -68,15 +59,6 @@ def update_chain(id:int, chain:str):
     except:
         return False
     return user
-
-# # Define the pic_format updating function
-# def update_pic_format(id:int, pic_format:str):
-#     user = db.query(User).filter(User.id == id).update({"pic_format" : pic_format})
-#     try:
-#         db.commit()
-#     except:
-#         return False
-#     return user
 
 def get_user_by_id(id:int):
     user = db.query(User).filter(User.id == id).first()

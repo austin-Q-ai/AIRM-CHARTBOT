@@ -119,6 +119,7 @@ function sleep(ms) {
     await frame.waitForSelector(`button.button-S_1OCXUK.button-neROVfUe.button-GwQQdU8S.apply-common-tooltip.isInteractive-GwQQdU8S.isGrouped-GwQQdU8S.accessible-GwQQdU8S[aria-label="${default_interval[user_interval]}"]`, {timeout:1000});
     await frame.$$eval(`button.button-S_1OCXUK.button-neROVfUe.button-GwQQdU8S.apply-common-tooltip.isInteractive-GwQQdU8S.isGrouped-GwQQdU8S.accessible-GwQQdU8S[aria-label="${default_interval[user_interval]}"]`, (el) => {el[0].click()});
     // Take a screenshot of the specified element
+    await sleep(2000)
     await page.screenshot({ path: file_path}); 
     await page.close();
     await browser.disconnect();
